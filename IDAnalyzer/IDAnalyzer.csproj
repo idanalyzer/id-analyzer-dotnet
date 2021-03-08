@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>IDAnalyzer.com</Authors>
+    <Company>Evith Information Technology Ltd.</Company>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://www.idanalyzer.com</PackageProjectUrl>
+    <Product>ID Analyzer Dot Net SDK</Product>
+    <Description>Scan and validate driver license, passport and ID card from any country using ID Analyzer Core API. Express user identity verification module to generate DocuPass identity verification link.</Description>
+    <Copyright>(C) 2021 IDAnalyzer.com</Copyright>
+    <PackageIcon>appicon.png</PackageIcon>
+    <PackageTags>id analyzer,passport,driver license,id card,identity verification,id verification,id ocr,pdf417,mrz,aamva</PackageTags>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="docfx.console" Version="2.56.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\img\appicon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

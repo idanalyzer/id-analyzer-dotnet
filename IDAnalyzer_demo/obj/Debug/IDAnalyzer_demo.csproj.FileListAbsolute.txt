@@ -1,0 +1,15 @@
+C:\Users\Jeremy\Dropbox\idanalyzer\dotnetsdk\IDAnalyzer\IDAnalyzer_demo\obj\Debug\IDAnalyzer_demo.csprojAssemblyReference.cache
+C:\Users\Jeremy\Dropbox\idanalyzer\dotnetsdk\IDAnalyzer\IDAnalyzer_demo\obj\Debug\IDAnalyzer_demo.Properties.Resources.resources
+C:\Users\Jeremy\Dropbox\idanalyzer\dotnetsdk\IDAnalyzer\IDAnalyzer_demo\obj\Debug\IDAnalyzer_demo.csproj.GenerateResource.cache
+C:\Users\Jeremy\Dropbox\idanalyzer\dotnetsdk\IDAnalyzer\IDAnalyzer_demo\obj\Debug\IDAnalyzer_demo.csproj.CoreCompileInputs.cache
+C:\Users\Jeremy\Dropbox\idanalyzer\dotnetsdk\IDAnalyzer\IDAnalyzer_demo\bin\Debug\IDAnalyzer_demo.exe.config
+C:\Users\Jeremy\Dropbox\idanalyzer\dotnetsdk\IDAnalyzer\IDAnalyzer_demo\bin\Debug\IDAnalyzer_demo.exe
+C:\Users\Jeremy\Dropbox\idanalyzer\dotnetsdk\IDAnalyzer\IDAnalyzer_demo\bin\Debug\IDAnalyzer_demo.pdb
+C:\Users\Jeremy\Dropbox\idanalyzer\dotnetsdk\IDAnalyzer\IDAnalyzer_demo\bin\Debug\IDAnalyzer.dll
+C:\Users\Jeremy\Dropbox\idanalyzer\dotnetsdk\IDAnalyzer\IDAnalyzer_demo\bin\Debug\IDAnalyzer.pdb
+C:\Users\Jeremy\Dropbox\idanalyzer\dotnetsdk\IDAnalyzer\IDAnalyzer_demo\obj\Debug\IDAnalyzer_demo.csproj.CopyComplete
+C:\Users\Jeremy\Dropbox\idanalyzer\dotnetsdk\IDAnalyzer\IDAnalyzer_demo\obj\Debug\IDAnalyzer_demo.exe
+C:\Users\Jeremy\Dropbox\idanalyzer\dotnetsdk\IDAnalyzer\IDAnalyzer_demo\obj\Debug\IDAnalyzer_demo.pdb
+C:\Users\Jeremy\Dropbox\idanalyzer\dotnetsdk\IDAnalyzer\IDAnalyzer_demo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jeremy\Dropbox\idanalyzer\dotnetsdk\IDAnalyzer\IDAnalyzer_demo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Jeremy\Dropbox\idanalyzer\dotnetsdk\IDAnalyzer\IDAnalyzer_demo\obj\Debug\IDAnalyzer_demo.Form1.resources

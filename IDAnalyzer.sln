@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDAnalyzer", "IDAnalyzer\IDAnalyzer.csproj", "{094FC195-1C6D-4A74-872C-24DB50919A3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDAnalyzer_demo", "IDAnalyzer_demo\IDAnalyzer_demo.csproj", "{3227C086-64CA-4E0E-A7EB-0176378ECA83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{094FC195-1C6D-4A74-872C-24DB50919A3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{094FC195-1C6D-4A74-872C-24DB50919A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{094FC195-1C6D-4A74-872C-24DB50919A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{094FC195-1C6D-4A74-872C-24DB50919A3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3227C086-64CA-4E0E-A7EB-0176378ECA83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3227C086-64CA-4E0E-A7EB-0176378ECA83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3227C086-64CA-4E0E-A7EB-0176378ECA83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3227C086-64CA-4E0E-A7EB-0176378ECA83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {255FF843-69F8-4D9D-B453-4B296A7E6AB5}
+	EndGlobalSection
+EndGlobal
