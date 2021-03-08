@@ -1,2 +1,7 @@
 .vs
 packages
+/**/DROP/
+/**/TEMP/
+/**/packages/
+/**/bin/
+/**/obj/
