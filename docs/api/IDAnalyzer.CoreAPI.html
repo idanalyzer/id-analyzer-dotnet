@@ -1,0 +1,1030 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CoreAPI
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CoreAPI
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="IDAnalyzer.CoreAPI">
+  
+  
+  <h1 id="IDAnalyzer_CoreAPI" data-uid="IDAnalyzer.CoreAPI" class="text-break">Class CoreAPI
+  </h1>
+  <div class="markdown level0 summary"><p>Multi-function ID verification API to verify document, its authenticity and face match the document with your user photo.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CoreAPI</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="IDAnalyzer.html">IDAnalyzer</a></h6>
+  <h6><strong>Assembly</strong>: IDAnalyzer.dll</h6>
+  <h5 id="IDAnalyzer_CoreAPI_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CoreAPI</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI__ctor_System_String_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.%23ctor(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L68">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI__ctor_" data-uid="IDAnalyzer.CoreAPI.#ctor*"></a>
+  <h4 id="IDAnalyzer_CoreAPI__ctor_System_String_System_String_" data-uid="IDAnalyzer.CoreAPI.#ctor(System.String,System.String)">CoreAPI(String, String)</h4>
+  <div class="markdown level1 summary"><p>Initialize Core API with an API key and optional region (US, EU)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CoreAPI(string apikey, string region = &quot;US&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apikey</span></td>
+        <td><p>You API key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">region</span></td>
+        <td><p>US/EU</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_EnableAuthentication_System_Boolean_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.EnableAuthentication(System.Boolean%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L149">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_EnableAuthentication_" data-uid="IDAnalyzer.CoreAPI.EnableAuthentication*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_EnableAuthentication_System_Boolean_System_String_" data-uid="IDAnalyzer.CoreAPI.EnableAuthentication(System.Boolean,System.String)">EnableAuthentication(Boolean, String)</h4>
+  <div class="markdown level1 summary"><p>Validate the document to check whether the document is authentic and has not been tampered, and set authentication module</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableAuthentication(bool enabled = false, string module = &quot;2&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enabled</span></td>
+        <td><p>Enable or disable document authentication</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">module</span></td>
+        <td><p>Authentication module version: &quot;1&quot;, &quot;2&quot; or &quot;quick&quot;</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_EnableBarcodeMode_System_Boolean_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.EnableBarcodeMode(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L351">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_EnableBarcodeMode_" data-uid="IDAnalyzer.CoreAPI.EnableBarcodeMode*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_EnableBarcodeMode_System_Boolean_" data-uid="IDAnalyzer.CoreAPI.EnableBarcodeMode(System.Boolean)">EnableBarcodeMode(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Disable Visual OCR and read data from AAMVA Barcodes only</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableBarcodeMode(bool enabled = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enabled</span></td>
+        <td><p>Enable or disable Barcode Mode</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_EnableDualsideCheck_System_Boolean_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.EnableDualsideCheck(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L208">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_EnableDualsideCheck_" data-uid="IDAnalyzer.CoreAPI.EnableDualsideCheck*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_EnableDualsideCheck_System_Boolean_" data-uid="IDAnalyzer.CoreAPI.EnableDualsideCheck(System.Boolean)">EnableDualsideCheck(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Check if the names, document number and document type matches between the front and the back of the document when performing dual-side scan. If any information mismatches error 14 will be thrown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableDualsideCheck(bool enabled = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enabled</span></td>
+        <td><p>Enable or disable dual-side information check</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_EnableImageOutput_System_Boolean_System_Boolean_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.EnableImageOutput(System.Boolean%2CSystem.Boolean%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L193">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_EnableImageOutput_" data-uid="IDAnalyzer.CoreAPI.EnableImageOutput*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_EnableImageOutput_System_Boolean_System_Boolean_System_String_" data-uid="IDAnalyzer.CoreAPI.EnableImageOutput(System.Boolean,System.Boolean,System.String)">EnableImageOutput(Boolean, Boolean, String)</h4>
+  <div class="markdown level1 summary"><p>Generate cropped image of document and/or face, and set output format [url, base64]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableImageOutput(bool cropDocument = false, bool cropFace = false, string outputFormat = &quot;url&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">cropDocument</span></td>
+        <td><p>Enable or disable document cropping</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">cropFace</span></td>
+        <td><p>Enable or disable face cropping</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">outputFormat</span></td>
+        <td><p>&quot;url&quot; or &quot;base64&quot;</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_EnableVault_System_Boolean_System_Boolean_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.EnableVault(System.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L365">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_EnableVault_" data-uid="IDAnalyzer.CoreAPI.EnableVault*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_EnableVault_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="IDAnalyzer.CoreAPI.EnableVault(System.Boolean,System.Boolean,System.Boolean,System.Boolean)">EnableVault(Boolean, Boolean, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Save document image and parsed information in your secured vault. You can list, search and update document entries in your vault through Vault API or web portal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableVault(bool enabled = true, bool saveUnrecognized = false, bool noDuplicateImage = false, bool autoMergeDocument = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enabled</span></td>
+        <td><p>Enable or disable Vault</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">saveUnrecognized</span></td>
+        <td><p>Save document image in your vault even if the document cannot be recognized</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noDuplicateImage</span></td>
+        <td><p>Automatically merge images with same document number into a single entry inside vault</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">autoMergeDocument</span></td>
+        <td><p>Prevent duplicated images from being saved</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_ResetConfig.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.ResetConfig%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L96">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_ResetConfig_" data-uid="IDAnalyzer.CoreAPI.ResetConfig*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_ResetConfig" data-uid="IDAnalyzer.CoreAPI.ResetConfig">ResetConfig()</h4>
+  <div class="markdown level1 summary"><p>Reset all API configurations except API key and region.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetConfig()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_RestrictCountry_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.RestrictCountry(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L315">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_RestrictCountry_" data-uid="IDAnalyzer.CoreAPI.RestrictCountry*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_RestrictCountry_System_String_" data-uid="IDAnalyzer.CoreAPI.RestrictCountry(System.String)">RestrictCountry(String)</h4>
+  <div class="markdown level1 summary"><p>Check if the document was issued by specified countries, if not error code 10 will be thrown. Separate multiple values with comma. For example &quot;US,CA&quot; would accept documents from United States and Canada.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RestrictCountry(string countryCodes = &quot;US,CA,UK&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">countryCodes</span></td>
+        <td><p>ISO ALPHA-2 Country Code separated by comma</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_RestrictState_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.RestrictState(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L326">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_RestrictState_" data-uid="IDAnalyzer.CoreAPI.RestrictState*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_RestrictState_System_String_" data-uid="IDAnalyzer.CoreAPI.RestrictState(System.String)">RestrictState(String)</h4>
+  <div class="markdown level1 summary"><p>Check if the document was issued by specified state, if not error code 11 will be thrown. Separate multiple values with comma. For example &quot;CA,TX&quot; would accept documents from California and Texas.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RestrictState(string states = &quot;CA,TX&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">states</span></td>
+        <td><p>State full name or abbreviation separated by comma</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_RestrictType_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.RestrictType(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L338">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_RestrictType_" data-uid="IDAnalyzer.CoreAPI.RestrictType*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_RestrictType_System_String_" data-uid="IDAnalyzer.CoreAPI.RestrictType(System.String)">RestrictType(String)</h4>
+  <div class="markdown level1 summary"><p>Check if the document was one of the specified types, if not error code 12 will be thrown. For example, &quot;PD&quot; would accept both passport and drivers license.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RestrictType(string documentType = &quot;DIP&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">documentType</span></td>
+        <td><p>P: Passport, D: Driver's License, I: Identity Card</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_Scan_System_String_System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.Scan(System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L402">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_Scan_" data-uid="IDAnalyzer.CoreAPI.Scan*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_Scan_System_String_System_String_System_String_System_String_System_String_" data-uid="IDAnalyzer.CoreAPI.Scan(System.String,System.String,System.String,System.String,System.String)">Scan(String, String, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Scan an ID document with Core API, optionally specify document back image, face verification image, face verification video and video passcode</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;JObject&gt; Scan(string document_primary, string document_secondary = &quot;&quot;, string biometric_photo = &quot;&quot;, string biometric_video = &quot;&quot;, string biometric_video_passcode = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">document_primary</span></td>
+        <td><p>Front of Document (File path or URL)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">document_secondary</span></td>
+        <td><p>Back of Document (File path or URL)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">biometric_photo</span></td>
+        <td><p>Face Photo (File path or URL)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">biometric_video</span></td>
+        <td><p>Face Video (File path or URL)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">biometric_video_passcode</span></td>
+        <td><p>Face Video Passcode (4 Digit Number)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Newtonsoft.Json.Linq.JObject</span>&gt;</td>
+        <td><p>Core API response data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_SetAccuracy_System_Int32_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.SetAccuracy(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L137">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_SetAccuracy_" data-uid="IDAnalyzer.CoreAPI.SetAccuracy*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_SetAccuracy_System_Int32_" data-uid="IDAnalyzer.CoreAPI.SetAccuracy(System.Int32)">SetAccuracy(Int32)</h4>
+  <div class="markdown level1 summary"><p>Set OCR Accuracy</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAccuracy(int accuracy = 2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">accuracy</span></td>
+        <td><p>0 = Fast, 1 = Balanced, 2 = Accurate, defaults to 2</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_SetBiometricThreshold_System_Double_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.SetBiometricThreshold(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L177">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_SetBiometricThreshold_" data-uid="IDAnalyzer.CoreAPI.SetBiometricThreshold*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_SetBiometricThreshold_System_Double_" data-uid="IDAnalyzer.CoreAPI.SetBiometricThreshold(System.Double)">SetBiometricThreshold(Double)</h4>
+  <div class="markdown level1 summary"><p>Set the minimum confidence score to consider faces being identical</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBiometricThreshold(double threshold = 0.4)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">threshold</span></td>
+        <td><p>Number between 0 to 1, higher value yields more strict verification</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_SetOCRImageResize_System_Int32_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.SetOCRImageResize(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L164">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_SetOCRImageResize_" data-uid="IDAnalyzer.CoreAPI.SetOCRImageResize*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_SetOCRImageResize_System_Int32_" data-uid="IDAnalyzer.CoreAPI.SetOCRImageResize(System.Int32)">SetOCRImageResize(Int32)</h4>
+  <div class="markdown level1 summary"><p>Scale down the uploaded image before sending to OCR engine. Adjust this value to fine tune recognition accuracy on large full-resolution images. Set 0 to disable image resizing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetOCRImageResize(int maxScale = 2000)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxScale</span></td>
+        <td><p>Number of 0 or between 500~4000</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_SetVaultData_System_String_System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.SetVaultData(System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L382">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_SetVaultData_" data-uid="IDAnalyzer.CoreAPI.SetVaultData*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_SetVaultData_System_String_System_String_System_String_System_String_System_String_" data-uid="IDAnalyzer.CoreAPI.SetVaultData(System.String,System.String,System.String,System.String,System.String)">SetVaultData(String, String, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Add up to 5 custom strings that will be associated with the vault entry, this can be useful for filtering and searching entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVaultData(string data1 = &quot;&quot;, string data2 = &quot;&quot;, string data3 = &quot;&quot;, string data4 = &quot;&quot;, string data5 = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">data1</span></td>
+        <td><p>Custom data field 1</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">data2</span></td>
+        <td><p>Custom data field 2</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">data3</span></td>
+        <td><p>Custom data field 3</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">data4</span></td>
+        <td><p>Custom data field 4</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">data5</span></td>
+        <td><p>Custom data field 5</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_ThrowAPIException_System_Boolean_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.ThrowAPIException(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L88">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_ThrowAPIException_" data-uid="IDAnalyzer.CoreAPI.ThrowAPIException*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_ThrowAPIException_System_Boolean_" data-uid="IDAnalyzer.CoreAPI.ThrowAPIException(System.Boolean)">ThrowAPIException(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Raise APIException when API returns error</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ThrowAPIException(bool throwException = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">throwException</span></td>
+        <td><p>Enable or Disable APIException being thrown</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_VerifyAddress_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.VerifyAddress(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L291">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_VerifyAddress_" data-uid="IDAnalyzer.CoreAPI.VerifyAddress*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_VerifyAddress_System_String_" data-uid="IDAnalyzer.CoreAPI.VerifyAddress(System.String)">VerifyAddress(String)</h4>
+  <div class="markdown level1 summary"><p>Check if supplied address matches with document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifyAddress(string address = &quot;123 Sample St, California, US&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>Address requiring validation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_VerifyAge_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.VerifyAge(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L272">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_VerifyAge_" data-uid="IDAnalyzer.CoreAPI.VerifyAge*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_VerifyAge_System_String_" data-uid="IDAnalyzer.CoreAPI.VerifyAge(System.String)">VerifyAge(String)</h4>
+  <div class="markdown level1 summary"><p>Check if the document holder is aged between the given range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifyAge(string ageRange = &quot;18-99&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">ageRange</span></td>
+        <td><p>Age range, example: 18-40</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_VerifyDOB_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.VerifyDOB(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L249">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_VerifyDOB_" data-uid="IDAnalyzer.CoreAPI.VerifyDOB*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_VerifyDOB_System_String_" data-uid="IDAnalyzer.CoreAPI.VerifyDOB(System.String)">VerifyDOB(String)</h4>
+  <div class="markdown level1 summary"><p>Check if supplied date of birth matches with document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifyDOB(string dob = &quot;1990/01/01&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dob</span></td>
+        <td><p>Date of birth in YYYY/MM/DD</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_VerifyDocumentNumber_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.VerifyDocumentNumber(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L227">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_VerifyDocumentNumber_" data-uid="IDAnalyzer.CoreAPI.VerifyDocumentNumber*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_VerifyDocumentNumber_System_String_" data-uid="IDAnalyzer.CoreAPI.VerifyDocumentNumber(System.String)">VerifyDocumentNumber(String)</h4>
+  <div class="markdown level1 summary"><p>Check if supplied document or personal number matches with document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifyDocumentNumber(string documentNumber = &quot;X1234567&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">documentNumber</span></td>
+        <td><p>Document or personal number requiring validation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_VerifyExpiry_System_Boolean_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.VerifyExpiry(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L218">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_VerifyExpiry_" data-uid="IDAnalyzer.CoreAPI.VerifyExpiry*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_VerifyExpiry_System_Boolean_" data-uid="IDAnalyzer.CoreAPI.VerifyExpiry(System.Boolean)">VerifyExpiry(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Check if the document is still valid based on its expiry date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifyExpiry(bool enabled = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enabled</span></td>
+        <td><p>Enable or disable  expiry check</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_VerifyName_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.VerifyName(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L236">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_VerifyName_" data-uid="IDAnalyzer.CoreAPI.VerifyName*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_VerifyName_System_String_" data-uid="IDAnalyzer.CoreAPI.VerifyName(System.String)">VerifyName(String)</h4>
+  <div class="markdown level1 summary"><p>Check if supplied name matches with document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifyName(string fullName = &quot;ELON MUSK&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fullName</span></td>
+        <td><p>Full name requiring validation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_VerifyPostcode_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.VerifyPostcode(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L303">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_VerifyPostcode_" data-uid="IDAnalyzer.CoreAPI.VerifyPostcode*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_VerifyPostcode_System_String_" data-uid="IDAnalyzer.CoreAPI.VerifyPostcode(System.String)">VerifyPostcode(String)</h4>
+  <div class="markdown level1 summary"><p>Check if supplied postcode matches with document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifyPostcode(string postcode = &quot;90001&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">postcode</span></td>
+        <td><p>Postcode requiring validation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L38" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
