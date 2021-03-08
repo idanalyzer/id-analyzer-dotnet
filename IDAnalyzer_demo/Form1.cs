@@ -160,6 +160,25 @@ namespace IDAnalyzer_demo
                 // We want to redirect user back to your website when they are done with verification  
                 docupass.SetRedirectionURL("https://www.your-website.com/verification_succeeded.php", "https://www.your-website.com/verification_failed.php");
 
+                /*
+                docupass.SetReusable(true); // allow DocuPass URL/QR Code to be used by multiple users  
+                docupass.SetLanguage("en"); // override auto language detection  
+                docupass.SetQRCodeFormat("000000", "FFFFFF", 5, 1); // generate a QR code using custom colors and size  
+                docupass.SetWelcomeMessage("We need to verify your driver license before you make a rental booking with our company."); // Display your own greeting message  
+                docupass.SetLogo("https://www.your-website.com/logo.png"); // change default logo to your own  
+                docupass.HideBrandingLogo(true); // hide footer logo  
+                docupass.RestrictCountry("US,CA,AU"); // accept documents from United States, Canada and Australia  
+                docupass.RestrictState("CA,TX,WA"); // accept documents from california, texas and washington  
+                docupass.RestrictType("DI"); // accept only driver license and identification card  
+                docupass.VerifyExpiry(true); // check document expiry  
+                docupass.VerifyAge("18-120"); // check if person is above 18  
+                docupass.VerifyDOB("1990/01/01"); // check if person's birthday is 1990/01/01  
+                docupass.VerifyDocumentNumber("X1234567"); // check if the person's ID number is X1234567  
+                docupass.VerifyName("Elon Musk"); // check if the person is named Elon Musk  
+                docupass.VerifyAddress("123 Sunny Rd, California"); // Check if address on ID matches with provided address  
+                docupass.VerifyPostcode("90001"); // check if postcode on ID matches with provided postcode
+                */
+
                 string docupass_module = comboBox1.Text.Substring(0, 1);
 
                 JObject result;
@@ -223,7 +242,7 @@ namespace IDAnalyzer_demo
             }
 
             button5.Enabled = true;
-
+            
         }
         private async void ScanID()
         {
@@ -238,6 +257,29 @@ namespace IDAnalyzer_demo
 
                 // Enable authentication and use 'quick' module to check if ID is authentic
                 coreapi.EnableAuthentication(true, "quick");
+
+
+                /*
+                coreapi.EnableVault(true, false, false, false);  // enable vault cloud storage to store document information and image
+                coreapi.SetBiometricThreshold(0.6); // make face verification more strict  
+                coreapi.EnableAuthentication(true, "quick"); // check if document is real using 'quick' module  
+                coreapi.EnableBarcodeMode(false); // disable OCR and scan for AAMVA barcodes only  
+                coreapi.EnableImageOutput(true, true, "url"); // output cropped document and face region in URL format  
+                coreapi.EnableDualsideCheck(true); // check if data on front and back of ID matches  
+                coreapi.SetVaultData("user@example.com", "12345" , "AABBCC"); // store custom data into vault  
+                coreapi.RestrictCountry("US,CA,AU"); // accept documents from United States, Canada and Australia  
+                coreapi.RestrictState("CA,TX,WA"); // accept documents from california, texas and washington  
+                coreapi.RestrictType("DI"); // accept only driver license and identification card  
+                coreapi.SetOCRImageResize(0); // disable OCR resizing  
+                coreapi.VerifyExpiry(true); // check document expiry  
+                coreapi.VerifyAge("18-120"); // check if person is above 18  
+                coreapi.VerifyDOB("1990/01/01"); // check if person's birthday is 1990/01/01  
+                coreapi.VerifyDocumentNumber("X1234567"); // check if the person's ID number is X1234567  
+                coreapi.VerifyName("Elon Musk"); // check if the person is named Elon Musk  
+                coreapi.VerifyAddress("123 Sunny Rd, California"); // Check if address on ID matches with provided address  
+                coreapi.VerifyPostcode("90001"); // check if postcode on ID matches with provided postcode
+                 */
+
 
                 // Send document to Core API and get json response
                 JObject result = await coreapi.Scan(textBox1.Text, textBox2.Text, textBox3.Text);

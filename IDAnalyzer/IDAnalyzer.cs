@@ -653,7 +653,7 @@ namespace IDAnalyzer
         /// Hide all branding logo
         /// </summary>
         /// <param name="hide">Hide logo</param>
-        public void hideBrandingLogo(bool hide = false)
+        public void HideBrandingLogo(bool hide = false)
         {
             this.config["nobranding"] = hide;
         }

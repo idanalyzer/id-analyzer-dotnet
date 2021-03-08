@@ -14,6 +14,7 @@
     <PackageTags>id analyzer,passport,driver license,id card,identity verification,id verification,id ocr,pdf417,mrz,aamva</PackageTags>
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
     <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/idanalyzer/id-analyzer-dotnet</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
