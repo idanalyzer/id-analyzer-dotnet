@@ -308,7 +308,7 @@ try{
 ```
 
 ## Demo
-Check out **/demo** folder for more PHP demo codes.
+Check out demo C# project.
 
 ## SDK Reference
 Check out [ID Analyzer Dot Net SDK Reference](https://idanalyzer.github.io/id-analyzer-dotnet/)
