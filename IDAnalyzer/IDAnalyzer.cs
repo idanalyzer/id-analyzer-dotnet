@@ -389,6 +389,16 @@ namespace IDAnalyzer
 
         }
 
+        /// <summary>
+        /// Set an API parameter and its value, this function allows you to set any API parameter without using the built-in functions
+        /// </summary>
+        /// <param name="parameterKey">Parameter key</param>
+        /// <param name="parameterValue">Parameter value</param>
+        public void SetParameter(string parameterKey, dynamic parameterValue)
+        {
+            this.config[parameterKey] = parameterValue;
+        }
+
 
         /// <summary>
         /// Scan an ID document with Core API, optionally specify document back image, face verification image, face verification video and video passcode
@@ -666,6 +676,27 @@ namespace IDAnalyzer
         {
             this.config["language"] = language;
         }
+
+
+        /// <summary>
+        /// Replace DocuPass page content with your own HTML and CSS, you can download the HTML/CSS template from DocuPass API Reference page
+        /// </summary>
+        /// <param name="url">URL pointing to your own HTML page</param>
+        public void SetCustomHTML(string url = "")
+        {
+            this.config["customhtmlurl"] = url;
+        }
+
+        /// <summary>
+        /// Set an API parameter and its value, this function allows you to set any API parameter without using the built-in functions
+        /// </summary>
+        /// <param name="parameterKey">Parameter key</param>
+        /// <param name="parameterValue">Parameter value</param>
+        public void SetParameter(string parameterKey, dynamic parameterValue)
+        {
+            this.config[parameterKey] = parameterValue;
+        }
+
 
 
 
