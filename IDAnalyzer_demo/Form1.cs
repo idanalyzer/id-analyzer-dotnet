@@ -14,7 +14,7 @@ namespace IDAnalyzer_demo
 {
     public partial class Form1 : Form
     {
-        const string API_KEY = "Your APU Key";
+        const string API_KEY = "Your API Key";
         const string API_REGION = "US";
         public Form1()
         {
@@ -125,6 +125,63 @@ namespace IDAnalyzer_demo
             button7.Enabled = true;
 
         }
+        private async void searchAMLbyName()
+        {
+            try { 
+                AMLAPI aml = new AMLAPI(API_KEY,  API_REGION);
+
+                aml.ThrowAPIException(true);
+
+                JObject result = await aml.SearchByName(textBox8.Text);
+
+                writeOutput("AML Search Result: ");
+                writeOutput(result.ToString(Newtonsoft.Json.Formatting.Indented));
+            }
+            catch (APIException e)
+            {
+                writeOutput("Error Code: " + e.ErrorCode);
+                writeOutput("Error Message: " + e.Message);
+            }
+            catch (ArgumentException e)
+            {
+                writeOutput("Input Error: " + e.Message);
+            }
+            catch (Exception e)
+            {
+                writeOutput("Unexpected Error: " + e.Message);
+            }
+
+        }
+        private async void searchAMLbyIDNumber()
+        {
+
+            try
+            {
+                AMLAPI aml = new AMLAPI(API_KEY, API_REGION);
+
+                aml.ThrowAPIException(true);
+
+                JObject result = await aml.SearchByIDNumber(textBox9.Text);
+
+                writeOutput("AML Search Result: ");
+                writeOutput(result.ToString(Newtonsoft.Json.Formatting.Indented));
+            }
+            catch (APIException e)
+            {
+                writeOutput("Error Code: " + e.ErrorCode);
+                writeOutput("Error Message: " + e.Message);
+            }
+            catch (ArgumentException e)
+            {
+                writeOutput("Input Error: " + e.Message);
+            }
+            catch (Exception e)
+            {
+                writeOutput("Unexpected Error: " + e.Message);
+            }
+           
+
+        }
         private async void CreateDocuPass()
         {
             button5.Enabled = false;
@@ -160,6 +217,7 @@ namespace IDAnalyzer_demo
                 // We want to redirect user back to your website when they are done with verification  
                 docupass.SetRedirectionURL("https://www.your-website.com/verification_succeeded.php", "https://www.your-website.com/verification_failed.php");
 
+
                 /*
                 docupass.SetReusable(true); // allow DocuPass URL/QR Code to be used by multiple users  
                 docupass.SetLanguage("en"); // override auto language detection  
@@ -177,7 +235,16 @@ namespace IDAnalyzer_demo
                 docupass.VerifyName("Elon Musk"); // check if the person is named Elon Musk  
                 docupass.VerifyAddress("123 Sunny Rd, California"); // Check if address on ID matches with provided address  
                 docupass.VerifyPostcode("90001"); // check if postcode on ID matches with provided postcode
+                docupass.SetCustomHTML("https://www.yourwebsite.com/docupass_template.html"); // use your own HTML/CSS for DocuPass page
+                docupass.SMSVerificationLink("+1333444555"); // Send verification link to user's mobile phone
+                docupass.EnablePhoneVerification(true); // get user to input their own phone number for verification
+                docupass.VerifyPhone("+1333444555"); // verify user's phone number you already have in your database
+                docupass.EnableAMLCheck(true); // enable AML/PEP compliance check
+                docupass.SetAMLDatabase("global_politicians,eu_meps,eu_cors"); // limit AML check to only PEPs
+                docupass.EnableAMLStrictMatch(true); // make AML matching more strict to prevent false positives
                 */
+
+
 
                 string docupass_module = comboBox1.Text.Substring(0, 1);
 
@@ -244,6 +311,7 @@ namespace IDAnalyzer_demo
             button5.Enabled = true;
             
         }
+
         private async void ScanID()
         {
             button1.Enabled = false;
@@ -278,6 +346,9 @@ namespace IDAnalyzer_demo
                 coreapi.VerifyName("Elon Musk"); // check if the person is named Elon Musk  
                 coreapi.VerifyAddress("123 Sunny Rd, California"); // Check if address on ID matches with provided address  
                 coreapi.VerifyPostcode("90001"); // check if postcode on ID matches with provided postcode
+                coreapi.EnableAMLCheck(true); // enable AML/PEP check
+                coreapi.SetAMLDatabase("global_politicians,eu_meps,eu_cors"); // limit AML check to only PEPs
+                coreapi.EnableAMLStrictMatch(true); // make AML matching more strict to prevent false positives
                  */
 
 
@@ -376,6 +447,16 @@ namespace IDAnalyzer_demo
         private void button7_Click(object sender, EventArgs e)
         {
             listVaultData();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            searchAMLbyName();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            searchAMLbyIDNumber();
         }
     }
 }

@@ -126,6 +126,9 @@ namespace IDAnalyzer
             this.config["vault_customdata5"] = "";
             this.config["barcodemode"] = false;
             this.config["biometric_threshold"] = 0.4;
+            this.config["aml_check"] = false;
+            this.config["aml_strict_match"] = false;
+            this.config["aml_database"] = "";
             this.config["client"] = "dotnet-sdk";
 
         }
@@ -210,6 +213,35 @@ namespace IDAnalyzer
             this.config["dualsidecheck"] = enabled;
 
         }
+
+        /// <summary>
+        /// Check document holder's name and document number against ID Analyzer AML Database for sanctions, crimes and PEPs.
+        /// </summary>
+        /// <param name="enabled">Enable or disable AML check</param>
+        public void EnableAMLCheck(bool enabled = false)
+        {
+            this.config["aml_check"] = enabled;
+        }
+
+        /// <summary>
+        /// Specify the source databases to perform AML check, if left blank, all source databases will be checked. Separate each database code with comma, for example: un_sc,us_ofac. For full list of source databases and corresponding code visit AML API Overview.
+        /// </summary>
+        /// <param name="databases">Database codes separated by comma</param>
+        public void SetAMLDatabase(string databases = "au_dfat,ca_dfatd,ch_seco,eu_fsf,fr_tresor_gels_avoir,gb_hmt,ua_sfms,un_sc,us_ofac,eu_cor,eu_meps,global_politicians,interpol_red")
+        {
+            this.config["aml_database"] = databases;
+        }
+
+
+        /// <summary>
+        /// By default, entities with identical name or document number will be considered a match even though their birthday or nationality may be unknown. Enable this parameter to reduce false-positives by only matching entities with exact same nationality and birthday.
+        /// </summary>
+        /// <param name="enabled">Enable or disable AML strict match mode</param>
+        public void EnableAMLStrictMatch(bool enabled = false)
+        {
+            this.config["aml_strict_match"] = enabled;
+        }
+
 
         /// <summary>
         /// Check if the document is still valid based on its expiry date.
@@ -477,7 +509,7 @@ namespace IDAnalyzer
             }
          
             string json = JsonConvert.SerializeObject(payload);
-            Console.WriteLine(json);
+            //Console.WriteLine(json);
             var response = await APIclient.PostAsync(this.ApiEndpoint, new StringContent(json, Encoding.UTF8, "application/json"));
             response.EnsureSuccessStatusCode();
             string jsonresponse = await response.Content.ReadAsStringAsync();
@@ -614,6 +646,12 @@ namespace IDAnalyzer
             this.config["language"] =  "";
             this.config["biometric_threshold"] =  0.4;
             this.config["reusable"] =  false;
+            this.config["aml_check"] = false;
+            this.config["aml_strict_match"] = false;
+            this.config["aml_database"] = "";
+            this.config["phoneverification"] = false;
+            this.config["verify_phone"] = "";
+            this.config["sms_verification_link"] = "";
             this.config["client"] = "dotnet-sdk";
         }
 
@@ -646,6 +684,63 @@ namespace IDAnalyzer
         public void SetWelcomeMessage(string message = "")
         {
             this.config["welcomemessage"] = message;
+        }
+
+
+        /// <summary>
+        /// Check document holder's name and document number against ID Analyzer AML Database for sanctions, crimes and PEPs.
+        /// </summary>
+        /// <param name="enabled">Enable or disable AML check</param>
+        public void EnableAMLCheck(bool enabled = false)
+        {
+            this.config["aml_check"] = enabled;
+        }
+
+        /// <summary>
+        /// Specify the source databases to perform AML check, if left blank, all source databases will be checked. Separate each database code with comma, for example: un_sc,us_ofac. For full list of source databases and corresponding code visit AML API Overview.
+        /// </summary>
+        /// <param name="databases">Database codes separated by comma</param>
+        public void SetAMLDatabase(string databases = "au_dfat,ca_dfatd,ch_seco,eu_fsf,fr_tresor_gels_avoir,gb_hmt,ua_sfms,un_sc,us_ofac,eu_cor,eu_meps,global_politicians,interpol_red")
+        {
+            this.config["aml_database"] = databases;
+        }
+
+
+        /// <summary>
+        /// By default, entities with identical name or document number will be considered a match even though their birthday or nationality may be unknown. Enable this parameter to reduce false-positives by only matching entities with exact same nationality and birthday.
+        /// </summary>
+        /// <param name="enabled">Enable or disable AML strict match mode</param>
+        public void EnableAMLStrictMatch(bool enabled = false)
+        {
+            this.config["aml_strict_match"] = enabled;
+        }
+
+
+        /// <summary>
+        /// Whether to ask user to enter a phone number for verification, DocuPass supports both mobile or landline number verification. Verified phone number will be returned in callback JSON.
+        /// </summary>
+        /// <param name="enabled">Enable or disable user phone verification</param>
+        public void EnablePhoneVerification(bool enabled = false)
+        {
+            this.config["phoneverification"] = enabled;
+        }
+
+        /// <summary>
+        /// DocuPass will send SMS to this number containing DocuPass link to perform identity verification, the number provided will be automatically considered as verified if user completes identity verification. If an invalid or unreachable number is provided error 1050 will be thrown. You should add your own thresholding mechanism to prevent abuse as you will be charged 1 quota to send the SMS.
+        /// </summary>
+        /// <param name="mobileNumber">Mobile number should be provided in international format such as +1333444555</param>
+        public void SMSVerificationLink(string mobileNumber = "+1333444555")
+        {
+            this.config["sms_verification_link"] = mobileNumber;
+        }
+
+        /// <summary>
+        /// DocuPass will attempt to verify this phone number as part of the identity verification process, both mobile or landline are supported, if this value is provided phoneverification will be automatically enabled but users will not be able to enter their own numbers or change the provided number. 
+        /// </summary>
+        /// <param name="phoneNumber">Mobile or landline number should be provided in international format such as +1333444555</param>
+        public void VerifyPhone(string phoneNumber = "+1333444555")
+        {
+            this.config["verify_phone"] = phoneNumber;
         }
 
 
@@ -1340,7 +1435,7 @@ namespace IDAnalyzer
 
 
             string json = JsonConvert.SerializeObject(payload);
-            Console.WriteLine(json);
+            //Console.WriteLine(json);
             var response = await APIclient.PostAsync(this.ApiEndpoint + "vault/" + action, new StringContent(json, Encoding.UTF8, "application/json"));
             response.EnsureSuccessStatusCode();
             string jsonresponse = await response.Content.ReadAsStringAsync();
@@ -1370,4 +1465,172 @@ namespace IDAnalyzer
 
 
     }
+
+
+    /// <summary>
+    /// AML API allows you to monitor politically exposed persons (PEPs), and discover person or organization on under sanctions from worldwide governments. ID Analyzer AML solutions allows you to check for comprehensive customer due diligence and Anti Money Laundering (AML) and Know Your Customer (KYC) program.
+    /// </summary>
+    public class AMLAPI
+    {
+        private string Apikey;
+        private string ApiEndpoint = "";
+        private string AMLDatabases = "";
+        private string AMLEntityType = "";
+        private bool throwError = false;
+        private HttpClient APIclient = new HttpClient();
+
+        /// <summary>
+        /// Initialize AML API with an API key, and optional region (US, EU)
+        /// </summary>
+        /// <param name="apikey">You API key</param>
+        /// <param name="region">US/EU</param>
+        public AMLAPI(string apikey, string region = "US")
+        {
+            if (apikey == "") throw new ArgumentException("Please provide an API key");
+
+            this.Apikey = apikey;
+
+            if (region.ToLower() == "eu")
+            {
+                this.ApiEndpoint = "https://api-eu.idanalyzer.com/aml";
+            }
+            else if (region.ToLower() == "us")
+            {
+                this.ApiEndpoint = "https://api.idanalyzer.com/aml";
+            }
+            else
+            {
+                this.ApiEndpoint = region;
+            }
+
+        }
+
+        /// <summary>
+        /// Raise APIException when API returns an error
+        /// </summary>
+        /// <param name="throwException">Enable or Disable APIException being thrown</param>
+        public void ThrowAPIException(bool throwException = false)
+        {
+            this.throwError = throwException;
+        }
+
+
+        /// <summary>
+        /// Specify the source databases to perform AML search, if left blank, all source databases will be checked. Separate each database code with comma, for example: un_sc,us_ofac. For full list of source databases and corresponding code visit AML API Overview.
+        /// </summary>
+        /// <param name="databases">Database codes separated by comma</param>
+        public void SetAMLDatabase(string databases = "au_dfat,ca_dfatd,ch_seco,eu_fsf,fr_tresor_gels_avoir,gb_hmt,ua_sfms,un_sc,us_ofac,eu_cor,eu_meps,global_politicians,interpol_red")
+        {
+            this.AMLDatabases = databases;
+        }
+
+        /// <summary>
+        /// Return only entities with specified entity type, leave blank to return both person and legal entity.
+        /// </summary>
+        /// <param name="entityType">'person' or 'legalentity'</param>
+        public void SetEntityType(string entityType = "")
+        {
+            if (entityType!="person" && entityType!="legalentity" && entityType!="")
+            {
+                throw new ArgumentException("Entity Type should be either empty, 'person' or 'legalentity'");
+            }
+            this.AMLEntityType = entityType;
+        }
+
+
+        /// <summary>
+        /// Search AML Database using a person or company's name or alias
+        /// </summary>
+        /// <param name="name">Name or alias to search AML Database</param>
+        /// <param name="country">ISO 2 Country Code</param>
+        /// <param name="dob">Date of birth in YYYY-MM-DD or YYYY-MM or YYYY format.</param>
+        /// <returns>AML match list</returns>
+        public async Task<JObject> SearchByName(string name = "", string country = "", string dob = "")
+        {
+
+            if (name.Length <3)
+            {
+                throw new ArgumentException("Name should contain at least 3 characters.");
+            }
+
+            Hashtable payload = new Hashtable
+            {
+                ["name"] = name,
+                ["country"] = country,
+                ["dob"] = dob
+            };
+
+            return await this.CallAPI( payload);
+
+
+        }
+
+        /// <summary>
+        /// Search AML Database using a document number (Passport, ID Card or any identification documents)
+        /// </summary>
+        /// <param name="documentNumber">Document ID Number to perform search</param>
+        /// <param name="country">ISO 2 Country Code</param>
+        /// <param name="dob">Date of birth in YYYY-MM-DD or YYYY-MM or YYYY format.</param>
+        /// <returns>AML match list</returns>
+        public async Task<JObject> SearchByIDNumber(string documentNumber = "", string country = "", string dob = "")
+        {
+
+            if (documentNumber.Length < 5)
+            {
+                throw new ArgumentException("Document number should contain at least 5 characters.");
+            }
+
+            Hashtable payload = new Hashtable
+            {
+                ["documentnumber"] = documentNumber,
+                ["country"] = country,
+                ["dob"] = dob
+            };
+
+            return await this.CallAPI(payload);
+
+
+        }
+
+        public async Task<JObject> CallAPI(Hashtable payload)
+        {
+            payload["apikey"] = this.Apikey;
+            payload["entity"] = this.AMLEntityType;
+            payload["database"] = this.AMLDatabases;
+            payload["client"] = "dotnet-sdk";
+
+
+            string json = JsonConvert.SerializeObject(payload);
+            //Console.WriteLine(json);
+            var response = await APIclient.PostAsync(this.ApiEndpoint, new StringContent(json, Encoding.UTF8, "application/json"));
+            response.EnsureSuccessStatusCode();
+            string jsonresponse = await response.Content.ReadAsStringAsync();
+            //Console.WriteLine(jsonresponse);
+            JObject result = JObject.Parse(jsonresponse);
+
+            if (this.throwError)
+            {
+
+                if (result.ContainsKey("error"))
+                {
+                    throw new APIException((string)result["error"]["message"], (int)result["error"]["code"]);
+                }
+                else
+                {
+                    return result;
+                }
+            }
+            else
+            {
+                return result;
+            }
+
+
+        }
+
+
+
+
+    }
+
 }

@@ -5,6 +5,18 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/IDAnalyzer.AMLAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDAnalyzer.AMLAPI.html",
+          "hash": "EDu48qPyZOidzOQeMCnmVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/IDAnalyzer.APIException.yml",
       "output": {
         ".html": {
@@ -21,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IDAnalyzer.CoreAPI.html",
-          "hash": "B9VqxHBM0Zu6aMlM2EWBdg=="
+          "hash": "5ObsVU+z5JP7d+5l8W08rA=="
         }
       },
       "is_incremental": false,
@@ -33,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IDAnalyzer.DocuPass.html",
-          "hash": "aoGTigs8j7uFfZDq16h4yw=="
+          "hash": "DripRqtLfoyQpDk9dQ02kQ=="
         }
       },
       "is_incremental": false,
@@ -45,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IDAnalyzer.Vault.html",
-          "hash": "45FBa7HOhIoATxjQ9rZtqg=="
+          "hash": "dnH5lCxfncLe15yAAnWo9A=="
         }
       },
       "is_incremental": false,
@@ -57,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IDAnalyzer.html",
-          "hash": "aCRsj35sGF+M0CWyO7IpQg=="
+          "hash": "wwPop5YUppSewihVSBD21g=="
         }
       },
       "is_incremental": false,
@@ -81,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Vu2qdb2wgAikTpl4o0hpDw=="
+          "hash": "qIaGsYnTLOIXqvTJ7HvLXA=="
         }
       },
       "is_incremental": false,
@@ -156,7 +168,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 5,
+          "total_file_count": 6,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

@@ -157,10 +157,78 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_EnableAMLCheck_System_Boolean_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.EnableAMLCheck(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L221">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_EnableAMLCheck_" data-uid="IDAnalyzer.CoreAPI.EnableAMLCheck*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_EnableAMLCheck_System_Boolean_" data-uid="IDAnalyzer.CoreAPI.EnableAMLCheck(System.Boolean)">EnableAMLCheck(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Check document holder's name and document number against ID Analyzer AML Database for sanctions, crimes and PEPs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableAMLCheck(bool enabled = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enabled</span></td>
+        <td><p>Enable or disable AML check</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_EnableAMLStrictMatch_System_Boolean_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.EnableAMLStrictMatch(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L240">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_EnableAMLStrictMatch_" data-uid="IDAnalyzer.CoreAPI.EnableAMLStrictMatch*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_EnableAMLStrictMatch_System_Boolean_" data-uid="IDAnalyzer.CoreAPI.EnableAMLStrictMatch(System.Boolean)">EnableAMLStrictMatch(Boolean)</h4>
+  <div class="markdown level1 summary"><p>By default, entities with identical name or document number will be considered a match even though their birthday or nationality may be unknown. Enable this parameter to reduce false-positives by only matching entities with exact same nationality and birthday.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableAMLStrictMatch(bool enabled = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enabled</span></td>
+        <td><p>Enable or disable AML strict match mode</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_EnableAuthentication_System_Boolean_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.EnableAuthentication(System.Boolean%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L149">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L152">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_EnableAuthentication_" data-uid="IDAnalyzer.CoreAPI.EnableAuthentication*"></a>
   <h4 id="IDAnalyzer_CoreAPI_EnableAuthentication_System_Boolean_System_String_" data-uid="IDAnalyzer.CoreAPI.EnableAuthentication(System.Boolean,System.String)">EnableAuthentication(Boolean, String)</h4>
@@ -200,7 +268,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_EnableBarcodeMode_System_Boolean_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.EnableBarcodeMode(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L351">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L383">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_EnableBarcodeMode_" data-uid="IDAnalyzer.CoreAPI.EnableBarcodeMode*"></a>
   <h4 id="IDAnalyzer_CoreAPI_EnableBarcodeMode_System_Boolean_" data-uid="IDAnalyzer.CoreAPI.EnableBarcodeMode(System.Boolean)">EnableBarcodeMode(Boolean)</h4>
@@ -234,7 +302,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_EnableDualsideCheck_System_Boolean_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.EnableDualsideCheck(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L208">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L211">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_EnableDualsideCheck_" data-uid="IDAnalyzer.CoreAPI.EnableDualsideCheck*"></a>
   <h4 id="IDAnalyzer_CoreAPI_EnableDualsideCheck_System_Boolean_" data-uid="IDAnalyzer.CoreAPI.EnableDualsideCheck(System.Boolean)">EnableDualsideCheck(Boolean)</h4>
@@ -268,7 +336,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_EnableImageOutput_System_Boolean_System_Boolean_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.EnableImageOutput(System.Boolean%2CSystem.Boolean%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L193">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L196">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_EnableImageOutput_" data-uid="IDAnalyzer.CoreAPI.EnableImageOutput*"></a>
   <h4 id="IDAnalyzer_CoreAPI_EnableImageOutput_System_Boolean_System_Boolean_System_String_" data-uid="IDAnalyzer.CoreAPI.EnableImageOutput(System.Boolean,System.Boolean,System.String)">EnableImageOutput(Boolean, Boolean, String)</h4>
@@ -314,7 +382,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_EnableVault_System_Boolean_System_Boolean_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.EnableVault(System.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L365">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L397">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_EnableVault_" data-uid="IDAnalyzer.CoreAPI.EnableVault*"></a>
   <h4 id="IDAnalyzer_CoreAPI_EnableVault_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="IDAnalyzer.CoreAPI.EnableVault(System.Boolean,System.Boolean,System.Boolean,System.Boolean)">EnableVault(Boolean, Boolean, Boolean, Boolean)</h4>
@@ -382,7 +450,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_RestrictCountry_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.RestrictCountry(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L315">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L347">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_RestrictCountry_" data-uid="IDAnalyzer.CoreAPI.RestrictCountry*"></a>
   <h4 id="IDAnalyzer_CoreAPI_RestrictCountry_System_String_" data-uid="IDAnalyzer.CoreAPI.RestrictCountry(System.String)">RestrictCountry(String)</h4>
@@ -416,7 +484,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_RestrictState_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.RestrictState(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L326">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L358">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_RestrictState_" data-uid="IDAnalyzer.CoreAPI.RestrictState*"></a>
   <h4 id="IDAnalyzer_CoreAPI_RestrictState_System_String_" data-uid="IDAnalyzer.CoreAPI.RestrictState(System.String)">RestrictState(String)</h4>
@@ -450,7 +518,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_RestrictType_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.RestrictType(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L338">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L370">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_RestrictType_" data-uid="IDAnalyzer.CoreAPI.RestrictType*"></a>
   <h4 id="IDAnalyzer_CoreAPI_RestrictType_System_String_" data-uid="IDAnalyzer.CoreAPI.RestrictType(System.String)">RestrictType(String)</h4>
@@ -484,7 +552,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_Scan_System_String_System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.Scan(System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L402">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L444">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_Scan_" data-uid="IDAnalyzer.CoreAPI.Scan*"></a>
   <h4 id="IDAnalyzer_CoreAPI_Scan_System_String_System_String_System_String_System_String_System_String_" data-uid="IDAnalyzer.CoreAPI.Scan(System.String,System.String,System.String,System.String,System.String)">Scan(String, String, String, String, String)</h4>
@@ -558,7 +626,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_SetAccuracy_System_Int32_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.SetAccuracy(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L137">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L140">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_SetAccuracy_" data-uid="IDAnalyzer.CoreAPI.SetAccuracy*"></a>
   <h4 id="IDAnalyzer_CoreAPI_SetAccuracy_System_Int32_" data-uid="IDAnalyzer.CoreAPI.SetAccuracy(System.Int32)">SetAccuracy(Int32)</h4>
@@ -589,10 +657,44 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_SetAMLDatabase_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.SetAMLDatabase(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L230">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_SetAMLDatabase_" data-uid="IDAnalyzer.CoreAPI.SetAMLDatabase*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_SetAMLDatabase_System_String_" data-uid="IDAnalyzer.CoreAPI.SetAMLDatabase(System.String)">SetAMLDatabase(String)</h4>
+  <div class="markdown level1 summary"><p>Specify the source databases to perform AML check, if left blank, all source databases will be checked. Separate each database code with comma, for example: un_sc,us_ofac. For full list of source databases and corresponding code visit AML API Overview.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAMLDatabase(string databases = &quot;au_dfat,ca_dfatd,ch_seco,eu_fsf,fr_tresor_gels_avoir,gb_hmt,ua_sfms,un_sc,us_ofac,eu_cor,eu_meps,global_politicians,interpol_red&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">databases</span></td>
+        <td><p>Database codes separated by comma</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_SetBiometricThreshold_System_Double_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.SetBiometricThreshold(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L177">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L180">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_SetBiometricThreshold_" data-uid="IDAnalyzer.CoreAPI.SetBiometricThreshold*"></a>
   <h4 id="IDAnalyzer_CoreAPI_SetBiometricThreshold_System_Double_" data-uid="IDAnalyzer.CoreAPI.SetBiometricThreshold(System.Double)">SetBiometricThreshold(Double)</h4>
@@ -626,7 +728,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_SetOCRImageResize_System_Int32_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.SetOCRImageResize(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L164">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L167">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_SetOCRImageResize_" data-uid="IDAnalyzer.CoreAPI.SetOCRImageResize*"></a>
   <h4 id="IDAnalyzer_CoreAPI_SetOCRImageResize_System_Int32_" data-uid="IDAnalyzer.CoreAPI.SetOCRImageResize(System.Int32)">SetOCRImageResize(Int32)</h4>
@@ -657,10 +759,50 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_SetParameter_System_String_System_Object_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.SetParameter(System.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L429">View Source</a>
+  </span>
+  <a id="IDAnalyzer_CoreAPI_SetParameter_" data-uid="IDAnalyzer.CoreAPI.SetParameter*"></a>
+  <h4 id="IDAnalyzer_CoreAPI_SetParameter_System_String_System_Object_" data-uid="IDAnalyzer.CoreAPI.SetParameter(System.String,System.Object)">SetParameter(String, Object)</h4>
+  <div class="markdown level1 summary"><p>Set an API parameter and its value, this function allows you to set any API parameter without using the built-in functions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetParameter(string parameterKey, dynamic parameterValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterKey</span></td>
+        <td><p>Parameter key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">parameterValue</span></td>
+        <td><p>Parameter value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_SetVaultData_System_String_System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.SetVaultData(System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L382">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L414">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_SetVaultData_" data-uid="IDAnalyzer.CoreAPI.SetVaultData*"></a>
   <h4 id="IDAnalyzer_CoreAPI_SetVaultData_System_String_System_String_System_String_System_String_System_String_" data-uid="IDAnalyzer.CoreAPI.SetVaultData(System.String,System.String,System.String,System.String,System.String)">SetVaultData(String, String, String, String, String)</h4>
@@ -752,7 +894,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_VerifyAddress_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.VerifyAddress(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L291">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L323">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_VerifyAddress_" data-uid="IDAnalyzer.CoreAPI.VerifyAddress*"></a>
   <h4 id="IDAnalyzer_CoreAPI_VerifyAddress_System_String_" data-uid="IDAnalyzer.CoreAPI.VerifyAddress(System.String)">VerifyAddress(String)</h4>
@@ -786,7 +928,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_VerifyAge_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.VerifyAge(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L272">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L304">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_VerifyAge_" data-uid="IDAnalyzer.CoreAPI.VerifyAge*"></a>
   <h4 id="IDAnalyzer_CoreAPI_VerifyAge_System_String_" data-uid="IDAnalyzer.CoreAPI.VerifyAge(System.String)">VerifyAge(String)</h4>
@@ -820,7 +962,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_VerifyDOB_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.VerifyDOB(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L249">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L281">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_VerifyDOB_" data-uid="IDAnalyzer.CoreAPI.VerifyDOB*"></a>
   <h4 id="IDAnalyzer_CoreAPI_VerifyDOB_System_String_" data-uid="IDAnalyzer.CoreAPI.VerifyDOB(System.String)">VerifyDOB(String)</h4>
@@ -854,7 +996,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_VerifyDocumentNumber_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.VerifyDocumentNumber(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L227">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L259">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_VerifyDocumentNumber_" data-uid="IDAnalyzer.CoreAPI.VerifyDocumentNumber*"></a>
   <h4 id="IDAnalyzer_CoreAPI_VerifyDocumentNumber_System_String_" data-uid="IDAnalyzer.CoreAPI.VerifyDocumentNumber(System.String)">VerifyDocumentNumber(String)</h4>
@@ -888,7 +1030,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_VerifyExpiry_System_Boolean_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.VerifyExpiry(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L218">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L250">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_VerifyExpiry_" data-uid="IDAnalyzer.CoreAPI.VerifyExpiry*"></a>
   <h4 id="IDAnalyzer_CoreAPI_VerifyExpiry_System_Boolean_" data-uid="IDAnalyzer.CoreAPI.VerifyExpiry(System.Boolean)">VerifyExpiry(Boolean)</h4>
@@ -922,7 +1064,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_VerifyName_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.VerifyName(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L236">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L268">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_VerifyName_" data-uid="IDAnalyzer.CoreAPI.VerifyName*"></a>
   <h4 id="IDAnalyzer_CoreAPI_VerifyName_System_String_" data-uid="IDAnalyzer.CoreAPI.VerifyName(System.String)">VerifyName(String)</h4>
@@ -956,7 +1098,7 @@
     <a href="https://github.com/idanalyzer/id-analyzer-dotnet/new/master/apiSpec/new?filename=IDAnalyzer_CoreAPI_VerifyPostcode_System_String_.md&amp;value=---%0Auid%3A%20IDAnalyzer.CoreAPI.VerifyPostcode(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L303">View Source</a>
+    <a href="https://github.com/idanalyzer/id-analyzer-dotnet/blob/master/IDAnalyzer/IDAnalyzer.cs/#L335">View Source</a>
   </span>
   <a id="IDAnalyzer_CoreAPI_VerifyPostcode_" data-uid="IDAnalyzer.CoreAPI.VerifyPostcode*"></a>
   <h4 id="IDAnalyzer_CoreAPI_VerifyPostcode_System_String_" data-uid="IDAnalyzer.CoreAPI.VerifyPostcode(System.String)">VerifyPostcode(String)</h4>

@@ -8,16 +8,16 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://www.idanalyzer.com</PackageProjectUrl>
     <Product>ID Analyzer Dot Net SDK</Product>
-    <Description>Scan and validate driver license, passport and ID card from any country using ID Analyzer Core API. Express user identity verification module to generate DocuPass identity verification link.</Description>
+    <Description>Scan and validate driver license, passport and ID card from any country using ID Analyzer Core API. Express user identity verification module to generate DocuPass identity verification link. AML/PEP compliance check with AML API.</Description>
     <Copyright>(C) 2021 IDAnalyzer.com</Copyright>
     <PackageIcon>appicon.png</PackageIcon>
-    <PackageTags>id analyzer,passport,driver license,id card,identity verification,id verification,id ocr,pdf417,mrz,aamva</PackageTags>
-    <PackageReleaseNotes>v1.1.0</PackageReleaseNotes>
+    <PackageTags>id analyzer,passport,driver license,id card,identity verification,id verification,id ocr,pdf417,mrz,aamva,aml,pep</PackageTags>
+    <PackageReleaseNotes>v1.2.0</PackageReleaseNotes>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/idanalyzer/id-analyzer-dotnet</RepositoryUrl>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
-    <Version>1.1.0</Version>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

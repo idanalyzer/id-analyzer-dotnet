@@ -7,6 +7,103 @@ references:
   commentId: N:IDAnalyzer
   fullName: IDAnalyzer
   nameWithType: IDAnalyzer
+- uid: IDAnalyzer.AMLAPI
+  name: AMLAPI
+  href: api/IDAnalyzer.AMLAPI.html
+  commentId: T:IDAnalyzer.AMLAPI
+  fullName: IDAnalyzer.AMLAPI
+  nameWithType: AMLAPI
+- uid: IDAnalyzer.AMLAPI.#ctor(System.String,System.String)
+  name: AMLAPI(String, String)
+  href: api/IDAnalyzer.AMLAPI.html#IDAnalyzer_AMLAPI__ctor_System_String_System_String_
+  commentId: M:IDAnalyzer.AMLAPI.#ctor(System.String,System.String)
+  fullName: IDAnalyzer.AMLAPI.AMLAPI(System.String, System.String)
+  nameWithType: AMLAPI.AMLAPI(String, String)
+- uid: IDAnalyzer.AMLAPI.#ctor*
+  name: AMLAPI
+  href: api/IDAnalyzer.AMLAPI.html#IDAnalyzer_AMLAPI__ctor_
+  commentId: Overload:IDAnalyzer.AMLAPI.#ctor
+  isSpec: "True"
+  fullName: IDAnalyzer.AMLAPI.AMLAPI
+  nameWithType: AMLAPI.AMLAPI
+- uid: IDAnalyzer.AMLAPI.CallAPI(System.Collections.Hashtable)
+  name: CallAPI(Hashtable)
+  href: api/IDAnalyzer.AMLAPI.html#IDAnalyzer_AMLAPI_CallAPI_System_Collections_Hashtable_
+  commentId: M:IDAnalyzer.AMLAPI.CallAPI(System.Collections.Hashtable)
+  fullName: IDAnalyzer.AMLAPI.CallAPI(System.Collections.Hashtable)
+  nameWithType: AMLAPI.CallAPI(Hashtable)
+- uid: IDAnalyzer.AMLAPI.CallAPI*
+  name: CallAPI
+  href: api/IDAnalyzer.AMLAPI.html#IDAnalyzer_AMLAPI_CallAPI_
+  commentId: Overload:IDAnalyzer.AMLAPI.CallAPI
+  isSpec: "True"
+  fullName: IDAnalyzer.AMLAPI.CallAPI
+  nameWithType: AMLAPI.CallAPI
+- uid: IDAnalyzer.AMLAPI.SearchByIDNumber(System.String,System.String,System.String)
+  name: SearchByIDNumber(String, String, String)
+  href: api/IDAnalyzer.AMLAPI.html#IDAnalyzer_AMLAPI_SearchByIDNumber_System_String_System_String_System_String_
+  commentId: M:IDAnalyzer.AMLAPI.SearchByIDNumber(System.String,System.String,System.String)
+  fullName: IDAnalyzer.AMLAPI.SearchByIDNumber(System.String, System.String, System.String)
+  nameWithType: AMLAPI.SearchByIDNumber(String, String, String)
+- uid: IDAnalyzer.AMLAPI.SearchByIDNumber*
+  name: SearchByIDNumber
+  href: api/IDAnalyzer.AMLAPI.html#IDAnalyzer_AMLAPI_SearchByIDNumber_
+  commentId: Overload:IDAnalyzer.AMLAPI.SearchByIDNumber
+  isSpec: "True"
+  fullName: IDAnalyzer.AMLAPI.SearchByIDNumber
+  nameWithType: AMLAPI.SearchByIDNumber
+- uid: IDAnalyzer.AMLAPI.SearchByName(System.String,System.String,System.String)
+  name: SearchByName(String, String, String)
+  href: api/IDAnalyzer.AMLAPI.html#IDAnalyzer_AMLAPI_SearchByName_System_String_System_String_System_String_
+  commentId: M:IDAnalyzer.AMLAPI.SearchByName(System.String,System.String,System.String)
+  fullName: IDAnalyzer.AMLAPI.SearchByName(System.String, System.String, System.String)
+  nameWithType: AMLAPI.SearchByName(String, String, String)
+- uid: IDAnalyzer.AMLAPI.SearchByName*
+  name: SearchByName
+  href: api/IDAnalyzer.AMLAPI.html#IDAnalyzer_AMLAPI_SearchByName_
+  commentId: Overload:IDAnalyzer.AMLAPI.SearchByName
+  isSpec: "True"
+  fullName: IDAnalyzer.AMLAPI.SearchByName
+  nameWithType: AMLAPI.SearchByName
+- uid: IDAnalyzer.AMLAPI.SetAMLDatabase(System.String)
+  name: SetAMLDatabase(String)
+  href: api/IDAnalyzer.AMLAPI.html#IDAnalyzer_AMLAPI_SetAMLDatabase_System_String_
+  commentId: M:IDAnalyzer.AMLAPI.SetAMLDatabase(System.String)
+  fullName: IDAnalyzer.AMLAPI.SetAMLDatabase(System.String)
+  nameWithType: AMLAPI.SetAMLDatabase(String)
+- uid: IDAnalyzer.AMLAPI.SetAMLDatabase*
+  name: SetAMLDatabase
+  href: api/IDAnalyzer.AMLAPI.html#IDAnalyzer_AMLAPI_SetAMLDatabase_
+  commentId: Overload:IDAnalyzer.AMLAPI.SetAMLDatabase
+  isSpec: "True"
+  fullName: IDAnalyzer.AMLAPI.SetAMLDatabase
+  nameWithType: AMLAPI.SetAMLDatabase
+- uid: IDAnalyzer.AMLAPI.SetEntityType(System.String)
+  name: SetEntityType(String)
+  href: api/IDAnalyzer.AMLAPI.html#IDAnalyzer_AMLAPI_SetEntityType_System_String_
+  commentId: M:IDAnalyzer.AMLAPI.SetEntityType(System.String)
+  fullName: IDAnalyzer.AMLAPI.SetEntityType(System.String)
+  nameWithType: AMLAPI.SetEntityType(String)
+- uid: IDAnalyzer.AMLAPI.SetEntityType*
+  name: SetEntityType
+  href: api/IDAnalyzer.AMLAPI.html#IDAnalyzer_AMLAPI_SetEntityType_
+  commentId: Overload:IDAnalyzer.AMLAPI.SetEntityType
+  isSpec: "True"
+  fullName: IDAnalyzer.AMLAPI.SetEntityType
+  nameWithType: AMLAPI.SetEntityType
+- uid: IDAnalyzer.AMLAPI.ThrowAPIException(System.Boolean)
+  name: ThrowAPIException(Boolean)
+  href: api/IDAnalyzer.AMLAPI.html#IDAnalyzer_AMLAPI_ThrowAPIException_System_Boolean_
+  commentId: M:IDAnalyzer.AMLAPI.ThrowAPIException(System.Boolean)
+  fullName: IDAnalyzer.AMLAPI.ThrowAPIException(System.Boolean)
+  nameWithType: AMLAPI.ThrowAPIException(Boolean)
+- uid: IDAnalyzer.AMLAPI.ThrowAPIException*
+  name: ThrowAPIException
+  href: api/IDAnalyzer.AMLAPI.html#IDAnalyzer_AMLAPI_ThrowAPIException_
+  commentId: Overload:IDAnalyzer.AMLAPI.ThrowAPIException
+  isSpec: "True"
+  fullName: IDAnalyzer.AMLAPI.ThrowAPIException
+  nameWithType: AMLAPI.ThrowAPIException
 - uid: IDAnalyzer.APIException
   name: APIException
   href: api/IDAnalyzer.APIException.html
@@ -63,6 +160,32 @@ references:
   isSpec: "True"
   fullName: IDAnalyzer.CoreAPI.CoreAPI
   nameWithType: CoreAPI.CoreAPI
+- uid: IDAnalyzer.CoreAPI.EnableAMLCheck(System.Boolean)
+  name: EnableAMLCheck(Boolean)
+  href: api/IDAnalyzer.CoreAPI.html#IDAnalyzer_CoreAPI_EnableAMLCheck_System_Boolean_
+  commentId: M:IDAnalyzer.CoreAPI.EnableAMLCheck(System.Boolean)
+  fullName: IDAnalyzer.CoreAPI.EnableAMLCheck(System.Boolean)
+  nameWithType: CoreAPI.EnableAMLCheck(Boolean)
+- uid: IDAnalyzer.CoreAPI.EnableAMLCheck*
+  name: EnableAMLCheck
+  href: api/IDAnalyzer.CoreAPI.html#IDAnalyzer_CoreAPI_EnableAMLCheck_
+  commentId: Overload:IDAnalyzer.CoreAPI.EnableAMLCheck
+  isSpec: "True"
+  fullName: IDAnalyzer.CoreAPI.EnableAMLCheck
+  nameWithType: CoreAPI.EnableAMLCheck
+- uid: IDAnalyzer.CoreAPI.EnableAMLStrictMatch(System.Boolean)
+  name: EnableAMLStrictMatch(Boolean)
+  href: api/IDAnalyzer.CoreAPI.html#IDAnalyzer_CoreAPI_EnableAMLStrictMatch_System_Boolean_
+  commentId: M:IDAnalyzer.CoreAPI.EnableAMLStrictMatch(System.Boolean)
+  fullName: IDAnalyzer.CoreAPI.EnableAMLStrictMatch(System.Boolean)
+  nameWithType: CoreAPI.EnableAMLStrictMatch(Boolean)
+- uid: IDAnalyzer.CoreAPI.EnableAMLStrictMatch*
+  name: EnableAMLStrictMatch
+  href: api/IDAnalyzer.CoreAPI.html#IDAnalyzer_CoreAPI_EnableAMLStrictMatch_
+  commentId: Overload:IDAnalyzer.CoreAPI.EnableAMLStrictMatch
+  isSpec: "True"
+  fullName: IDAnalyzer.CoreAPI.EnableAMLStrictMatch
+  nameWithType: CoreAPI.EnableAMLStrictMatch
 - uid: IDAnalyzer.CoreAPI.EnableAuthentication(System.Boolean,System.String)
   name: EnableAuthentication(Boolean, String)
   href: api/IDAnalyzer.CoreAPI.html#IDAnalyzer_CoreAPI_EnableAuthentication_System_Boolean_System_String_
@@ -206,6 +329,19 @@ references:
   isSpec: "True"
   fullName: IDAnalyzer.CoreAPI.SetAccuracy
   nameWithType: CoreAPI.SetAccuracy
+- uid: IDAnalyzer.CoreAPI.SetAMLDatabase(System.String)
+  name: SetAMLDatabase(String)
+  href: api/IDAnalyzer.CoreAPI.html#IDAnalyzer_CoreAPI_SetAMLDatabase_System_String_
+  commentId: M:IDAnalyzer.CoreAPI.SetAMLDatabase(System.String)
+  fullName: IDAnalyzer.CoreAPI.SetAMLDatabase(System.String)
+  nameWithType: CoreAPI.SetAMLDatabase(String)
+- uid: IDAnalyzer.CoreAPI.SetAMLDatabase*
+  name: SetAMLDatabase
+  href: api/IDAnalyzer.CoreAPI.html#IDAnalyzer_CoreAPI_SetAMLDatabase_
+  commentId: Overload:IDAnalyzer.CoreAPI.SetAMLDatabase
+  isSpec: "True"
+  fullName: IDAnalyzer.CoreAPI.SetAMLDatabase
+  nameWithType: CoreAPI.SetAMLDatabase
 - uid: IDAnalyzer.CoreAPI.SetBiometricThreshold(System.Double)
   name: SetBiometricThreshold(Double)
   href: api/IDAnalyzer.CoreAPI.html#IDAnalyzer_CoreAPI_SetBiometricThreshold_System_Double_
@@ -232,6 +368,19 @@ references:
   isSpec: "True"
   fullName: IDAnalyzer.CoreAPI.SetOCRImageResize
   nameWithType: CoreAPI.SetOCRImageResize
+- uid: IDAnalyzer.CoreAPI.SetParameter(System.String,System.Object)
+  name: SetParameter(String, Object)
+  href: api/IDAnalyzer.CoreAPI.html#IDAnalyzer_CoreAPI_SetParameter_System_String_System_Object_
+  commentId: M:IDAnalyzer.CoreAPI.SetParameter(System.String,System.Object)
+  fullName: IDAnalyzer.CoreAPI.SetParameter(System.String, System.Object)
+  nameWithType: CoreAPI.SetParameter(String, Object)
+- uid: IDAnalyzer.CoreAPI.SetParameter*
+  name: SetParameter
+  href: api/IDAnalyzer.CoreAPI.html#IDAnalyzer_CoreAPI_SetParameter_
+  commentId: Overload:IDAnalyzer.CoreAPI.SetParameter
+  isSpec: "True"
+  fullName: IDAnalyzer.CoreAPI.SetParameter
+  nameWithType: CoreAPI.SetParameter
 - uid: IDAnalyzer.CoreAPI.SetVaultData(System.String,System.String,System.String,System.String,System.String)
   name: SetVaultData(String, String, String, String, String)
   href: api/IDAnalyzer.CoreAPI.html#IDAnalyzer_CoreAPI_SetVaultData_System_String_System_String_System_String_System_String_System_String_
@@ -420,6 +569,32 @@ references:
   isSpec: "True"
   fullName: IDAnalyzer.DocuPass.CreateRedirection
   nameWithType: DocuPass.CreateRedirection
+- uid: IDAnalyzer.DocuPass.EnableAMLCheck(System.Boolean)
+  name: EnableAMLCheck(Boolean)
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_EnableAMLCheck_System_Boolean_
+  commentId: M:IDAnalyzer.DocuPass.EnableAMLCheck(System.Boolean)
+  fullName: IDAnalyzer.DocuPass.EnableAMLCheck(System.Boolean)
+  nameWithType: DocuPass.EnableAMLCheck(Boolean)
+- uid: IDAnalyzer.DocuPass.EnableAMLCheck*
+  name: EnableAMLCheck
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_EnableAMLCheck_
+  commentId: Overload:IDAnalyzer.DocuPass.EnableAMLCheck
+  isSpec: "True"
+  fullName: IDAnalyzer.DocuPass.EnableAMLCheck
+  nameWithType: DocuPass.EnableAMLCheck
+- uid: IDAnalyzer.DocuPass.EnableAMLStrictMatch(System.Boolean)
+  name: EnableAMLStrictMatch(Boolean)
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_EnableAMLStrictMatch_System_Boolean_
+  commentId: M:IDAnalyzer.DocuPass.EnableAMLStrictMatch(System.Boolean)
+  fullName: IDAnalyzer.DocuPass.EnableAMLStrictMatch(System.Boolean)
+  nameWithType: DocuPass.EnableAMLStrictMatch(Boolean)
+- uid: IDAnalyzer.DocuPass.EnableAMLStrictMatch*
+  name: EnableAMLStrictMatch
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_EnableAMLStrictMatch_
+  commentId: Overload:IDAnalyzer.DocuPass.EnableAMLStrictMatch
+  isSpec: "True"
+  fullName: IDAnalyzer.DocuPass.EnableAMLStrictMatch
+  nameWithType: DocuPass.EnableAMLStrictMatch
 - uid: IDAnalyzer.DocuPass.EnableAuthentication(System.Boolean,System.String,System.Double)
   name: EnableAuthentication(Boolean, String, Double)
   href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_EnableAuthentication_System_Boolean_System_String_System_Double_
@@ -459,6 +634,19 @@ references:
   isSpec: "True"
   fullName: IDAnalyzer.DocuPass.EnableFaceVerification
   nameWithType: DocuPass.EnableFaceVerification
+- uid: IDAnalyzer.DocuPass.EnablePhoneVerification(System.Boolean)
+  name: EnablePhoneVerification(Boolean)
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_EnablePhoneVerification_System_Boolean_
+  commentId: M:IDAnalyzer.DocuPass.EnablePhoneVerification(System.Boolean)
+  fullName: IDAnalyzer.DocuPass.EnablePhoneVerification(System.Boolean)
+  nameWithType: DocuPass.EnablePhoneVerification(Boolean)
+- uid: IDAnalyzer.DocuPass.EnablePhoneVerification*
+  name: EnablePhoneVerification
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_EnablePhoneVerification_
+  commentId: Overload:IDAnalyzer.DocuPass.EnablePhoneVerification
+  isSpec: "True"
+  fullName: IDAnalyzer.DocuPass.EnablePhoneVerification
+  nameWithType: DocuPass.EnablePhoneVerification
 - uid: IDAnalyzer.DocuPass.EnableVault(System.Boolean)
   name: EnableVault(Boolean)
   href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_EnableVault_System_Boolean_
@@ -537,6 +725,19 @@ references:
   isSpec: "True"
   fullName: IDAnalyzer.DocuPass.RestrictType
   nameWithType: DocuPass.RestrictType
+- uid: IDAnalyzer.DocuPass.SetAMLDatabase(System.String)
+  name: SetAMLDatabase(String)
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_SetAMLDatabase_System_String_
+  commentId: M:IDAnalyzer.DocuPass.SetAMLDatabase(System.String)
+  fullName: IDAnalyzer.DocuPass.SetAMLDatabase(System.String)
+  nameWithType: DocuPass.SetAMLDatabase(String)
+- uid: IDAnalyzer.DocuPass.SetAMLDatabase*
+  name: SetAMLDatabase
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_SetAMLDatabase_
+  commentId: Overload:IDAnalyzer.DocuPass.SetAMLDatabase
+  isSpec: "True"
+  fullName: IDAnalyzer.DocuPass.SetAMLDatabase
+  nameWithType: DocuPass.SetAMLDatabase
 - uid: IDAnalyzer.DocuPass.SetCallbackImage(System.Boolean,System.Boolean,System.Int32)
   name: SetCallbackImage(Boolean, Boolean, Int32)
   href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_SetCallbackImage_System_Boolean_System_Boolean_System_Int32_
@@ -563,6 +764,19 @@ references:
   isSpec: "True"
   fullName: IDAnalyzer.DocuPass.SetCallbackURL
   nameWithType: DocuPass.SetCallbackURL
+- uid: IDAnalyzer.DocuPass.SetCustomHTML(System.String)
+  name: SetCustomHTML(String)
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_SetCustomHTML_System_String_
+  commentId: M:IDAnalyzer.DocuPass.SetCustomHTML(System.String)
+  fullName: IDAnalyzer.DocuPass.SetCustomHTML(System.String)
+  nameWithType: DocuPass.SetCustomHTML(String)
+- uid: IDAnalyzer.DocuPass.SetCustomHTML*
+  name: SetCustomHTML
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_SetCustomHTML_
+  commentId: Overload:IDAnalyzer.DocuPass.SetCustomHTML
+  isSpec: "True"
+  fullName: IDAnalyzer.DocuPass.SetCustomHTML
+  nameWithType: DocuPass.SetCustomHTML
 - uid: IDAnalyzer.DocuPass.SetCustomID(System.String)
   name: SetCustomID(String)
   href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_SetCustomID_System_String_
@@ -615,6 +829,19 @@ references:
   isSpec: "True"
   fullName: IDAnalyzer.DocuPass.SetMaxAttempt
   nameWithType: DocuPass.SetMaxAttempt
+- uid: IDAnalyzer.DocuPass.SetParameter(System.String,System.Object)
+  name: SetParameter(String, Object)
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_SetParameter_System_String_System_Object_
+  commentId: M:IDAnalyzer.DocuPass.SetParameter(System.String,System.Object)
+  fullName: IDAnalyzer.DocuPass.SetParameter(System.String, System.Object)
+  nameWithType: DocuPass.SetParameter(String, Object)
+- uid: IDAnalyzer.DocuPass.SetParameter*
+  name: SetParameter
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_SetParameter_
+  commentId: Overload:IDAnalyzer.DocuPass.SetParameter
+  isSpec: "True"
+  fullName: IDAnalyzer.DocuPass.SetParameter
+  nameWithType: DocuPass.SetParameter
 - uid: IDAnalyzer.DocuPass.SetQRCodeFormat(System.String,System.String,System.Int32,System.Int32)
   name: SetQRCodeFormat(String, String, Int32, Int32)
   href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_SetQRCodeFormat_System_String_System_String_System_Int32_System_Int32_
@@ -667,6 +894,19 @@ references:
   isSpec: "True"
   fullName: IDAnalyzer.DocuPass.SetWelcomeMessage
   nameWithType: DocuPass.SetWelcomeMessage
+- uid: IDAnalyzer.DocuPass.SMSVerificationLink(System.String)
+  name: SMSVerificationLink(String)
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_SMSVerificationLink_System_String_
+  commentId: M:IDAnalyzer.DocuPass.SMSVerificationLink(System.String)
+  fullName: IDAnalyzer.DocuPass.SMSVerificationLink(System.String)
+  nameWithType: DocuPass.SMSVerificationLink(String)
+- uid: IDAnalyzer.DocuPass.SMSVerificationLink*
+  name: SMSVerificationLink
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_SMSVerificationLink_
+  commentId: Overload:IDAnalyzer.DocuPass.SMSVerificationLink
+  isSpec: "True"
+  fullName: IDAnalyzer.DocuPass.SMSVerificationLink
+  nameWithType: DocuPass.SMSVerificationLink
 - uid: IDAnalyzer.DocuPass.ThrowAPIException(System.Boolean)
   name: ThrowAPIException(Boolean)
   href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_ThrowAPIException_System_Boolean_
@@ -771,6 +1011,19 @@ references:
   isSpec: "True"
   fullName: IDAnalyzer.DocuPass.VerifyName
   nameWithType: DocuPass.VerifyName
+- uid: IDAnalyzer.DocuPass.VerifyPhone(System.String)
+  name: VerifyPhone(String)
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_VerifyPhone_System_String_
+  commentId: M:IDAnalyzer.DocuPass.VerifyPhone(System.String)
+  fullName: IDAnalyzer.DocuPass.VerifyPhone(System.String)
+  nameWithType: DocuPass.VerifyPhone(String)
+- uid: IDAnalyzer.DocuPass.VerifyPhone*
+  name: VerifyPhone
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_VerifyPhone_
+  commentId: Overload:IDAnalyzer.DocuPass.VerifyPhone
+  isSpec: "True"
+  fullName: IDAnalyzer.DocuPass.VerifyPhone
+  nameWithType: DocuPass.VerifyPhone
 - uid: IDAnalyzer.DocuPass.VerifyPostcode(System.String)
   name: VerifyPostcode(String)
   href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_VerifyPostcode_System_String_

@@ -105,6 +105,9 @@ coreapi.VerifyDocumentNumber("X1234567"); // check if the person's ID number is 
 coreapi.VerifyName("Elon Musk"); // check if the person is named Elon Musk  
 coreapi.VerifyAddress("123 Sunny Rd, California"); // Check if address on ID matches with provided address  
 coreapi.VerifyPostcode("90001"); // check if postcode on ID matches with provided postcode
+coreapi.EnableAMLCheck(true); // enable AML/PEP compliance check
+coreapi.SetAMLDatabase("global_politicians,eu_meps,eu_cors"); // limit AML check to only PEPs
+coreapi.EnableAMLStrictMatch(true); // make AML matching more strict to prevent false positives
 ```
 
 To **scan both front and back of ID**:
@@ -222,6 +225,13 @@ docupass.VerifyDocumentNumber("X1234567"); // check if the person's ID number is
 docupass.VerifyName("Elon Musk"); // check if the person is named Elon Musk  
 docupass.VerifyAddress("123 Sunny Rd, California"); // Check if address on ID matches with provided address  
 docupass.VerifyPostcode("90001"); // check if postcode on ID matches with provided postcode
+docupass.SetCustomHTML("https://www.yourwebsite.com/docupass_template.html"); // use your own HTML/CSS for DocuPass page
+docupass.SMSVerificationLink("+1333444555"); // Send verification link to user's mobile phone
+docupass.EnablePhoneVerification(true); // get user to input their own phone number for verification
+docupass.VerifyPhone("+1333444555"); // verify user's phone number you already have in your database
+docupass.EnableAMLCheck(true); // enable AML/PEP compliance check
+docupass.SetAMLDatabase("global_politicians,eu_meps,eu_cors"); // limit AML check to only PEPs
+docupass.EnableAMLStrictMatch(true); // make AML matching more strict to prevent false positives
 ```
 
 Now you should write a **callback script** or a **webhook**, to receive the verification results.  Visit [DocuPass Callback reference](https://developer.idanalyzer.com/docupass_callback.html) to check out the full payload returned by DocuPass. Callback script is generally programmed in a server environment and is beyond the scope of this guide, you can check out our [PHP SDK](https://github.com/idanalyzer/id-analyzer-php-sdk) for creating a callback script in PHP.
@@ -274,6 +284,39 @@ string[] filter = { "docupass_reference=XXXXXXXXXXXX" };
 JObject result = await vault.List(filter);
 ```
 Learn more about [Vault API](https://developer.idanalyzer.com/vaultapi.html).
+
+## AML API
+
+ID Analyzer provides Anti-Money Laundering AML database consolidated from worldwide authorities,  AML API allows our subscribers to lookup the database using either a name or document number. It allows you to instantly check if a person or company is listed under **any kind of sanction, criminal record or is a politically exposed person(PEP)**, as part of your **AML compliance KYC**. You may also use automated check built within Core API and DocuPass.
+
+```c#
+try
+{
+    AMLAPI aml = new AMLAPI(API_KEY,  API_REGION);
+
+    aml.ThrowAPIException(true);
+
+    JObject result = await aml.SearchByName("Joe Biden");
+
+    Console.WriteLine(result.ToString(Newtonsoft.Json.Formatting.Indented));
+
+}
+catch (APIException e)
+{
+    Console.WriteLine("Error Code: " + e.ErrorCode);
+    Console.WriteLine("Error Message: " + e.Message);
+}
+catch (ArgumentException e)
+{
+    Console.WriteLine("Input Error: " + e.Message);
+}
+catch (Exception e)
+{
+    Console.WriteLine("Unexpected Error: " + e.Message);
+}
+```
+
+Learn more about [AML API](https://developer.idanalyzer.com/amlapi.html).
 
 ## Error Catching
 
