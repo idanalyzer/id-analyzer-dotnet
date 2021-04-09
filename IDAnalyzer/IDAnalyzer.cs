@@ -100,7 +100,7 @@ namespace IDAnalyzer
             this.config["authenticate"] = false;
             this.config["authenticate_module"] = "1";
             this.config["ocr_scaledown"] = 2000;
-            this.config["outputimage"] = false;
+            this.config["outputimage"] = false;     
             this.config["outputface"] = false;
             this.config["outputmode"] = "url";
             this.config["dualsidecheck"] = false;
@@ -435,10 +435,10 @@ namespace IDAnalyzer
         /// <summary>
         /// Scan an ID document with Core API, optionally specify document back image, face verification image, face verification video and video passcode
         /// </summary>
-        /// <param name="document_primary">Front of Document (File path or URL)</param>
-        /// <param name="document_secondary">Back of Document (File path or URL)</param>
-        /// <param name="biometric_photo">Face Photo (File path or URL)</param>
-        /// <param name="biometric_video">Face Video (File path or URL)</param>
+        /// <param name="document_primary">Front of Document (File path, base64 content or URL)</param>
+        /// <param name="document_secondary">Back of Document (File path, base64 content or URL)</param>
+        /// <param name="biometric_photo">Face Photo (File path, base64 content or URL)</param>
+        /// <param name="biometric_video">Face Video (File path, base64 content or URL)</param>
         /// <param name="biometric_video_passcode">Face Video Passcode (4 Digit Number)</param>
         /// <returns>Core API response data</returns>
         public async Task<JObject> Scan(string document_primary, string document_secondary = "", string biometric_photo = "", string biometric_video = "", string biometric_video_passcode = "")
@@ -460,6 +460,10 @@ namespace IDAnalyzer
                 Byte[] bytes = File.ReadAllBytes(document_primary);
                 payload["file_base64"] = Convert.ToBase64String(bytes);
             }
+            else if (document_primary.Length > 100)
+            {
+                payload["file_base64"] = document_primary;
+            }
             else
             {
                 throw new ArgumentException("Invalid primary document image, file not found or malformed URL.");
@@ -474,7 +478,12 @@ namespace IDAnalyzer
                     Byte[] bytes = File.ReadAllBytes(document_secondary);
                     payload["file_back_base64"] = Convert.ToBase64String(bytes);
                 }
-                else {
+                else if (document_secondary.Length > 100)
+                {
+                    payload["file_back_base64"] = document_secondary;
+                }
+                else
+                {
                     throw new ArgumentException("Invalid secondary document image, file not found or malformed URL.");
                 }
             }
@@ -482,11 +491,17 @@ namespace IDAnalyzer
                 if(IsValidURL(biometric_photo)){
                     payload["faceurl"] =  biometric_photo;
                 }
-                    else if(File.Exists(biometric_photo)){
-                        Byte[] bytes = File.ReadAllBytes(biometric_photo);
-                        payload["face_base64"] = Convert.ToBase64String(bytes);
+                else if(File.Exists(biometric_photo))
+                {
+                    Byte[] bytes = File.ReadAllBytes(biometric_photo);
+                    payload["face_base64"] = Convert.ToBase64String(bytes);
                 }
-                    else {
+                else if (biometric_photo.Length > 100)
+                {
+                    payload["face_base64"] = biometric_photo;
+                }
+                else 
+                {
                     throw new ArgumentException("Invalid face image, file not found or malformed URL.");
                 }
             }
@@ -494,13 +509,19 @@ namespace IDAnalyzer
                 if(IsValidURL(biometric_video)){
                     payload["videourl"] =  biometric_video;
                 }
-                    else if(File.Exists(biometric_video)){
-                        Byte[] bytes = File.ReadAllBytes(biometric_video);
-                        payload["video_base64"] = Convert.ToBase64String(bytes);
+                else if(File.Exists(biometric_video))
+                {
+                    Byte[] bytes = File.ReadAllBytes(biometric_video);
+                    payload["video_base64"] = Convert.ToBase64String(bytes);
                 }
-                    else {
+                else if (biometric_video.Length > 100)
+                {
+                    payload["video_base64"] = biometric_video;
+                }
+                else {
                     throw new ArgumentException("Invalid face video, file not found or malformed URL.");
                 }
+
                 if (!Regex.Match(biometric_video_passcode, @"^([0-9]{4})$").Success) {
                     throw new ArgumentException("Please provide a 4 digit passcode for video biometric verification.");
                 }else{
@@ -652,6 +673,7 @@ namespace IDAnalyzer
             this.config["phoneverification"] = false;
             this.config["verify_phone"] = "";
             this.config["sms_verification_link"] = "";
+            this.config["customhtmlurl"] = "";
             this.config["client"] = "dotnet-sdk";
         }
 
@@ -1326,7 +1348,7 @@ namespace IDAnalyzer
         /// Add a document or face image into an existing vault entry
         /// </summary>
         /// <param name="vault_id">Vault entry ID</param>
-        /// <param name="image">Image file path or URL</param>
+        /// <param name="image">Image file path, base64 content or URL</param>
         /// <param name="type">Type of image: 0 = document, 1 = person</param>
         public async Task<JObject> AddImage(string vault_id, string image, int type = 0)
         {
@@ -1343,12 +1365,21 @@ namespace IDAnalyzer
             };
 
   
-            if(IsValidURL(image)){
+            if(IsValidURL(image))
+            {
                 payload["imageurl"] = image;
-            }else if(File.Exists(image)){
+            }
+            else if(File.Exists(image))
+            {
                 Byte[] bytes = File.ReadAllBytes(image);
                 payload["image"] = Convert.ToBase64String(bytes);
-            }else{
+            }
+            else if (image.Length > 100)
+            {
+                payload["image"] = image;
+            }
+            else
+            {
                 throw new ArgumentException("Invalid image, file not found or malformed URL.");
             }
 
@@ -1385,7 +1416,7 @@ namespace IDAnalyzer
         /// <summary>
         /// Search vault using a person's face image
         /// </summary>
-        /// <param name="image">Face image file path or URL</param>
+        /// <param name="image">Face image file path, base64 content or URL</param>
         /// <param name="maxEntry">Number of entries to return, 1 to 10.</param>
         /// <param name="threshold">Minimum confidence score required for face matching</param>
         public async Task<JObject> SearchFace(string image, int maxEntry = 10, double threshold = 0.5)
@@ -1395,14 +1426,22 @@ namespace IDAnalyzer
                 ["maxentry"] = maxEntry,
                 ["threshold"] = threshold
             };
-          
-            if(IsValidURL(image)){
+
+            if (IsValidURL(image))
+            {
                 payload["imageurl"] = image;
-            }else if(File.Exists(image)){
+            }
+            else if (File.Exists(image))
+            {
                 Byte[] bytes = File.ReadAllBytes(image);
                 payload["image"] = Convert.ToBase64String(bytes);
             }
-            else{
+            else if (image.Length > 100)
+            {
+                payload["image"] = image;
+            }
+            else
+            {
                 throw new ArgumentException("Invalid image, file not found or malformed URL.");
             }
 

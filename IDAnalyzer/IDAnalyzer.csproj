@@ -12,12 +12,15 @@
     <Copyright>(C) 2021 IDAnalyzer.com</Copyright>
     <PackageIcon>appicon.png</PackageIcon>
     <PackageTags>id analyzer,passport,driver license,id card,identity verification,id verification,id ocr,pdf417,mrz,aamva,aml,pep</PackageTags>
-    <PackageReleaseNotes>v1.2.0</PackageReleaseNotes>
+    <PackageReleaseNotes>v1.2.1
+
+Added AML Support
+Added Base64 Content as Scan input in Core API</PackageReleaseNotes>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/idanalyzer/id-analyzer-dotnet</RepositoryUrl>
-    <AssemblyVersion>1.2.0.0</AssemblyVersion>
-    <FileVersion>1.2.0.0</FileVersion>
-    <Version>1.2.0</Version>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <FileVersion>1.2.1.0</FileVersion>
+    <Version>1.2.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
