@@ -19,7 +19,7 @@ Install-Package IDAnalyzer
 Alternatively, download this package and add the project under`/IDAnalyzer` to your solution
 
 ## Core API
-[ID Analyzer Core API](https://www.idanalyzer.com/products/id-analyzer-core-api.html) allows you to perform OCR data extraction, facial biometric verification, identity verification, age verification, document cropping, document authentication (fake ID check) using an ID image (JPG, PNG, PDF accepted) and user selfie photo or video. Core API has great global coverage, supporting over 98% of the passports, driver licenses and identification cards currently being circulated around the world.
+[ID Analyzer Core API](https://www.idanalyzer.com/products/id-analyzer-core-api.html) allows you to perform OCR data extraction, facial biometric verification, identity verification, age verification, document cropping, document authentication (fake ID check), and paperwork automation using an ID image (JPG, PNG, PDF accepted) and user selfie photo or video. Core API has great global coverage, supporting over 98% of the passports, driver licenses and identification cards currently being circulated around the world.
 
 ![Sample ID](https://www.idanalyzer.com/img/sampleid1.jpg)
 
@@ -108,6 +108,7 @@ coreapi.VerifyPostcode("90001"); // check if postcode on ID matches with provide
 coreapi.EnableAMLCheck(true); // enable AML/PEP compliance check
 coreapi.SetAMLDatabase("global_politicians,eu_meps,eu_cors"); // limit AML check to only PEPs
 coreapi.EnableAMLStrictMatch(true); // make AML matching more strict to prevent false positives
+coreapi.GenerateContract("Template ID", "PDF", new Hashtable { ["somevariable"] = "somevalue" }); // generate a PDF document autofilled with data from user ID
 ```
 
 To **scan both front and back of ID**:
@@ -232,11 +233,63 @@ docupass.VerifyPhone("+1333444555"); // verify user's phone number you already h
 docupass.EnableAMLCheck(true); // enable AML/PEP compliance check
 docupass.SetAMLDatabase("global_politicians,eu_meps,eu_cors"); // limit AML check to only PEPs
 docupass.EnableAMLStrictMatch(true); // make AML matching more strict to prevent false positives
+docupass.GenerateContract("Template ID", "PDF", new Hashtable { ["somevariable"] = "somevalue" }); // automate paperwork by generating a document autofilled with ID data
+docupass.SignContract("Template ID", "PDF", new Hashtable { ["somevariable"] = "somevalue" }); // get user to review and sign legal document prefilled with ID data
 ```
 
 Now you should write a **callback script** or a **webhook**, to receive the verification results.  Visit [DocuPass Callback reference](https://developer.idanalyzer.com/docupass_callback.html) to check out the full payload returned by DocuPass. Callback script is generally programmed in a server environment and is beyond the scope of this guide, you can check out our [PHP SDK](https://github.com/idanalyzer/id-analyzer-php-sdk) for creating a callback script in PHP.
 
 For the final step, you could create two web pages (URLS set via `set_redirection_url`) that display the results to your user. DocuPass reference will be passed as a GET parameter when users are redirected, for example: https://www.your-website.com/verification_succeeded.php?reference=XXXXXXXXX, you could use the reference code to fetch the results from your database. P.S. We will always send callbacks to your server before redirecting your user to the set URL.
+
+## DocuPass Signature API
+
+You can get user to review and remotely sign legal document in DocuPass without identity verification, to do so you need to create a DocuPass Signature session.
+
+```c#
+DocuPass docupass = new DocuPass(API_KEY, "My Company Inc.", API_REGION);
+
+// Throw exception if API returns error
+docupass.ThrowAPIException(true);
+
+// We need to set an identifier so that we know internally who is signing the document, this string will be returned in the callback. You can use your own user/customer id.
+docupass.SetCustomID("123");
+
+// Enable vault cloud storage to store signed document
+docupass.EnableVault(true);
+
+// Set a callback URL where signed document will be sent, you can use docupass_callback.php under this folder as a template to receive the result
+docupass.SetCallbackURL("https://www.your-website.com/docupass_callback.php");
+
+// We want to redirect user back to your website when they are done with document signing, there will be no fail URL unlike identity verification
+docupass.SetRedirectionURL("https://www.your-website.com/verification_succeeded.php");
+
+/*
+docupass.SetReusable(true); // allow DocuPass URL/QR Code to be used by multiple users  
+docupass.SetLanguage("en"); // override auto language detection  
+docupass.SetQRCodeFormat("000000", "FFFFFF", 5, 1); // generate a QR code using custom colors and size  
+docupass.HideBrandingLogo(true); // hide branding footer  
+docupass.SetCustomHTML("https://www.yourwebsite.com/docupass_template.html"); // use your own HTML/CSS for DocuPass page
+docupass.SMSContractLink("+1333444555"); // Send signing link to user's mobile phone
+*/
+
+// Create and get template ID under web portal
+string template_id = "Your Template ID";
+
+// Assuming in your contract template you have a dynamic field %{email} and you want to fill it with user email
+Hashtable prefill = new Hashtable
+{
+    ["email"] = "user@example.com"
+};
+
+JObject result = await docupass.CreateSignature(template_id, "PDF", prefill);
+
+Console.WriteLine("Scan the QR Code below to sign document:");
+Console.WriteLine((string)result["qrcode"]);
+Console.WriteLine("Or open your browser and navigate to: ");
+Console.WriteLine((string)result["url"]);
+```
+
+Once user has reviewed and signed the document, the signed document will be sent back to your server using callback under the `contract.document_url` field, the contract will also be saved to vault if you have enabled vault.
 
 ## Vault API
 ID Analyzer provides free cloud database storage (Vault) for you to store data obtained through Core API and DocuPass. You can set whether you want to store your user data into Vault through `enableVault` while making an API request with PHP SDK. Data stored in Vault can be looked up through [Web Portal](https://portal.idanalyzer.com) or via Vault API.

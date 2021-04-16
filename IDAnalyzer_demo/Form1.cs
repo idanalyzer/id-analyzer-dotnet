@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -242,8 +243,10 @@ namespace IDAnalyzer_demo
                 docupass.EnableAMLCheck(true); // enable AML/PEP compliance check
                 docupass.SetAMLDatabase("global_politicians,eu_meps,eu_cors"); // limit AML check to only PEPs
                 docupass.EnableAMLStrictMatch(true); // make AML matching more strict to prevent false positives
+                docupass.GenerateContract("Template ID", "PDF", new Hashtable { ["somevariable"] = "somevalue" }); // automate paperwork by generating a document autofilled with ID data
+                docupass.SignContract("Template ID", "PDF", new Hashtable { ["somevariable"] = "somevalue" }); // get user to review and sign legal document prefilled with ID data
+                
                 */
-
 
 
                 string docupass_module = comboBox1.Text.Substring(0, 1);
@@ -312,6 +315,83 @@ namespace IDAnalyzer_demo
             
         }
 
+        private async void CreateDocuPassSignature()
+        {
+            button10.Enabled = false;
+            clearOutput();
+            try
+            {
+
+                DocuPass docupass = new DocuPass(API_KEY, "My Company Inc.", API_REGION);
+
+                // Throw exception if API returns error
+                docupass.ThrowAPIException(true);
+
+                // We need to set an identifier so that we know internally who is signing the document, this string will be returned in the callback. You can use your own user/customer id.
+                docupass.SetCustomID(textBox11.Text);
+
+                // Enable vault cloud storage to store signed document
+                docupass.EnableVault(true);
+
+                // Set a callback URL where signed document will be sent, you can use docupass_callback.php under this folder as a template to receive the result
+                docupass.SetCallbackURL("https://www.your-website.com/docupass_callback.php");
+
+                // We want to redirect user back to your website when they are done with document signing, there will be no fail URL unlike identity verification
+                docupass.SetRedirectionURL("https://www.your-website.com/verification_succeeded.php");
+
+
+                /*
+                docupass.SetReusable(true); // allow DocuPass URL/QR Code to be used by multiple users  
+                docupass.SetLanguage("en"); // override auto language detection  
+                docupass.SetQRCodeFormat("000000", "FFFFFF", 5, 1); // generate a QR code using custom colors and size  
+                docupass.HideBrandingLogo(true); // hide branding footer  
+                docupass.SetCustomHTML("https://www.yourwebsite.com/docupass_template.html"); // use your own HTML/CSS for DocuPass page
+                docupass.SMSContractLink("+1333444555"); // Send signing link to user's mobile phone
+                */
+
+
+                // Get template ID
+                string template_id = textBox10.Text;
+
+                // Assuming in your contract template you have a dynamic field %{email} and you want to fill it with user email
+
+                Hashtable prefill = new Hashtable
+                {
+                    ["email"] = "user@example.com"
+                };
+
+
+                JObject result = await docupass.CreateSignature(template_id, "PDF", prefill);
+
+                writeOutput("Scan the QR Code below to sign document:");
+                writeOutput((string)result["qrcode"]);
+                writeOutput("Or open your browser and navigate to: ");
+                writeOutput((string)result["url"]);
+
+
+                writeOutput(Environment.NewLine + "Raw JSON Result: ");
+                writeOutput(result.ToString());
+
+
+            }
+            catch (APIException e)
+            {
+                writeOutput("Error Code: " + e.ErrorCode);
+                writeOutput("Error Message: " + e.Message);
+            }
+            catch (ArgumentException e)
+            {
+                writeOutput("Input Error: " + e.Message);
+            }
+            catch (Exception e)
+            {
+                writeOutput("Unexpected Error: " + e.Message);
+            }
+
+            button10.Enabled = true;
+
+        }
+
         private async void ScanID()
         {
             button1.Enabled = false;
@@ -349,7 +429,9 @@ namespace IDAnalyzer_demo
                 coreapi.EnableAMLCheck(true); // enable AML/PEP check
                 coreapi.SetAMLDatabase("global_politicians,eu_meps,eu_cors"); // limit AML check to only PEPs
                 coreapi.EnableAMLStrictMatch(true); // make AML matching more strict to prevent false positives
+                coreapi.GenerateContract("Template ID", "PDF", new Hashtable { ["somevariable"] = "somevalue" }); // generate a PDF document autofilled with data from user ID
                  */
+
 
 
                 // Send document to Core API and get json response
@@ -457,6 +539,11 @@ namespace IDAnalyzer_demo
         private void button9_Click(object sender, EventArgs e)
         {
             searchAMLbyIDNumber();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            CreateDocuPassSignature();
         }
     }
 }

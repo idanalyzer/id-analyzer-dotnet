@@ -129,6 +129,9 @@ namespace IDAnalyzer
             this.config["aml_check"] = false;
             this.config["aml_strict_match"] = false;
             this.config["aml_database"] = "";
+            this.config["contract_generate"] = "";
+            this.config["contract_format"] = "";
+            this.config["contract_prefill_data"] = "";
             this.config["client"] = "dotnet-sdk";
 
         }
@@ -422,6 +425,23 @@ namespace IDAnalyzer
         }
 
         /// <summary>
+        /// Generate legal document using data from user uploaded ID
+        /// </summary>
+        /// <param name="templateId">Contract Template ID displayed under web portal</param>
+        /// <param name="format">Output file format: PDF, DOCX or HTML</param>
+        /// <param name="prefillData">Hashtable or JSON string, to autofill dynamic fields in contract template.</param>
+        public void GenerateContract(string templateId, string format = "PDF", dynamic prefillData = null)
+        {
+            if (templateId == "") {
+                throw new ArgumentException("Invalid template ID");
+            }
+            this.config["contract_generate"] = templateId;
+            this.config["contract_format"] = format;
+            this.config["contract_prefill_data"] = prefillData;
+
+        }
+
+        /// <summary>
         /// Set an API parameter and its value, this function allows you to set any API parameter without using the built-in functions
         /// </summary>
         /// <param name="parameterKey">Parameter key</param>
@@ -674,6 +694,11 @@ namespace IDAnalyzer
             this.config["verify_phone"] = "";
             this.config["sms_verification_link"] = "";
             this.config["customhtmlurl"] = "";
+            this.config["contract_generate"] = "";
+            this.config["contract_sign"] = "";
+            this.config["contract_format"] = "";
+            this.config["contract_prefill_data"] = "";
+            this.config["sms_contract_link"] = "";
             this.config["client"] = "dotnet-sdk";
         }
 
@@ -754,6 +779,15 @@ namespace IDAnalyzer
         public void SMSVerificationLink(string mobileNumber = "+1333444555")
         {
             this.config["sms_verification_link"] = mobileNumber;
+        }
+
+        /// <summary>
+        /// DocuPass will send SMS to this number containing DocuPass link to review and sign legal document.
+        /// </summary>
+        /// <param name="mobileNumber">Mobile number should be provided in international format such as +1333444555</param>
+        public void SMSContractLink(string mobileNumber = "+1333444555")
+        {
+            this.config["sms_contract_link"] = mobileNumber;
         }
 
         /// <summary>
@@ -840,11 +874,11 @@ namespace IDAnalyzer
         /// <param name="failURL">Redirection URL after verification failed</param>
         public void SetRedirectionURL(string successURL = "https://www.example.com/success.php", string failURL = "https://www.example.com/failed.php")
         {
-            if (!IsValidURL(successURL))
+            if (successURL!="" && !IsValidURL(successURL))
             {
                 throw new ArgumentException("Invalid URL format for success URL");
             }
-            if (!IsValidURL(failURL))
+            if (failURL!="" && !IsValidURL(failURL))
             {
                 throw new ArgumentException("Invalid URL format for fail URL");
             }
@@ -1104,6 +1138,85 @@ namespace IDAnalyzer
             this.config["vault_save"] =  enabled ;
         }
 
+        /// <summary>
+        /// Generate legal document using data from user uploaded ID
+        /// </summary>
+        /// <param name="templateId">Contract Template ID displayed under web portal</param>
+        /// <param name="format">Output file format: PDF, DOCX or HTML</param>
+        /// <param name="prefillData">Hashtable or JSON string, to autofill dynamic fields in contract template.</param>
+        public void GenerateContract(string templateId, string format = "PDF", dynamic prefillData = null)
+        {
+            if (templateId == "")
+            {
+                throw new ArgumentException("Invalid template ID");
+            }
+            this.config["contract_sign"] = "";
+            this.config["contract_generate"] = templateId;
+            this.config["contract_format"] = format;
+            this.config["contract_prefill_data"] = prefillData;
+
+        }
+
+        /// <summary>
+        /// Have user review and sign autofilled legal document after successful identity verification
+        /// </summary>
+        /// <param name="templateId">Contract Template ID displayed under web portal</param>
+        /// <param name="format">Output file format: PDF, DOCX or HTML</param>
+        /// <param name="prefillData">Hashtable or JSON string, to autofill dynamic fields in contract template.</param>
+        public void SignContract(string templateId, string format = "PDF", dynamic prefillData = null)
+        {
+            if (templateId == "")
+            {
+                throw new ArgumentException("Invalid template ID");
+            }
+            this.config["contract_generate"] = "";
+            this.config["contract_sign"] = templateId;
+            this.config["contract_format"] = format;
+            this.config["contract_prefill_data"] = prefillData;
+
+        }
+
+        /// <summary>
+        /// Create a DocuPass signature session for user to review and sign legal document without identity verification
+        /// </summary>
+        /// <param name="templateId">Contract Template ID displayed under web portal</param>
+        /// <param name="format">Output file format: PDF, DOCX or HTML</param>
+        /// <param name="prefillData">Hashtable or JSON string, to autofill dynamic fields in contract template.</param>
+        public async Task<JObject> CreateSignature(string templateId, string format = "PDF", dynamic prefillData = null)
+        {
+
+            var payload = this.config;
+            payload["apikey"] = this.Apikey;
+            payload["template_id"] = templateId;
+            payload["contract_format"] = format;
+            payload["contract_prefill_data"] = prefillData;
+
+            string json = JsonConvert.SerializeObject(payload);
+            var response = await APIclient.PostAsync(this.ApiEndpoint + "docupass/sign", new StringContent(json, Encoding.UTF8, "application/json"));
+            response.EnsureSuccessStatusCode();
+            string jsonresponse = await response.Content.ReadAsStringAsync();
+            JObject result = JObject.Parse(jsonresponse);
+
+            if (this.throwError)
+            {
+
+                if (result.ContainsKey("error"))
+                {
+                    throw new APIException((string)result["error"]["message"], (int)result["error"]["code"]);
+                }
+                else
+                {
+                    return result;
+                }
+            }
+            else
+            {
+                return result;
+            }
+
+
+        }
+
 
 
         /// <summary>
@@ -1181,8 +1294,6 @@ namespace IDAnalyzer
         /// <param name="hash">DocuPass callback hash</param>
         /// <returns>Validation result</returns>
         public async Task<bool> Validate(string reference, string hash){
-
-       
 
             Hashtable payload = new Hashtable
             {

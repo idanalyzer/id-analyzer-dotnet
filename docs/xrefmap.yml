@@ -251,6 +251,19 @@ references:
   isSpec: "True"
   fullName: IDAnalyzer.CoreAPI.EnableVault
   nameWithType: CoreAPI.EnableVault
+- uid: IDAnalyzer.CoreAPI.GenerateContract(System.String,System.String,System.Object)
+  name: GenerateContract(String, String, Object)
+  href: api/IDAnalyzer.CoreAPI.html#IDAnalyzer_CoreAPI_GenerateContract_System_String_System_String_System_Object_
+  commentId: M:IDAnalyzer.CoreAPI.GenerateContract(System.String,System.String,System.Object)
+  fullName: IDAnalyzer.CoreAPI.GenerateContract(System.String, System.String, System.Object)
+  nameWithType: CoreAPI.GenerateContract(String, String, Object)
+- uid: IDAnalyzer.CoreAPI.GenerateContract*
+  name: GenerateContract
+  href: api/IDAnalyzer.CoreAPI.html#IDAnalyzer_CoreAPI_GenerateContract_
+  commentId: Overload:IDAnalyzer.CoreAPI.GenerateContract
+  isSpec: "True"
+  fullName: IDAnalyzer.CoreAPI.GenerateContract
+  nameWithType: CoreAPI.GenerateContract
 - uid: IDAnalyzer.CoreAPI.ResetConfig
   name: ResetConfig()
   href: api/IDAnalyzer.CoreAPI.html#IDAnalyzer_CoreAPI_ResetConfig
@@ -569,6 +582,19 @@ references:
   isSpec: "True"
   fullName: IDAnalyzer.DocuPass.CreateRedirection
   nameWithType: DocuPass.CreateRedirection
+- uid: IDAnalyzer.DocuPass.CreateSignature(System.String,System.String,System.Object)
+  name: CreateSignature(String, String, Object)
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_CreateSignature_System_String_System_String_System_Object_
+  commentId: M:IDAnalyzer.DocuPass.CreateSignature(System.String,System.String,System.Object)
+  fullName: IDAnalyzer.DocuPass.CreateSignature(System.String, System.String, System.Object)
+  nameWithType: DocuPass.CreateSignature(String, String, Object)
+- uid: IDAnalyzer.DocuPass.CreateSignature*
+  name: CreateSignature
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_CreateSignature_
+  commentId: Overload:IDAnalyzer.DocuPass.CreateSignature
+  isSpec: "True"
+  fullName: IDAnalyzer.DocuPass.CreateSignature
+  nameWithType: DocuPass.CreateSignature
 - uid: IDAnalyzer.DocuPass.EnableAMLCheck(System.Boolean)
   name: EnableAMLCheck(Boolean)
   href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_EnableAMLCheck_System_Boolean_
@@ -660,6 +686,19 @@ references:
   isSpec: "True"
   fullName: IDAnalyzer.DocuPass.EnableVault
   nameWithType: DocuPass.EnableVault
+- uid: IDAnalyzer.DocuPass.GenerateContract(System.String,System.String,System.Object)
+  name: GenerateContract(String, String, Object)
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_GenerateContract_System_String_System_String_System_Object_
+  commentId: M:IDAnalyzer.DocuPass.GenerateContract(System.String,System.String,System.Object)
+  fullName: IDAnalyzer.DocuPass.GenerateContract(System.String, System.String, System.Object)
+  nameWithType: DocuPass.GenerateContract(String, String, Object)
+- uid: IDAnalyzer.DocuPass.GenerateContract*
+  name: GenerateContract
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_GenerateContract_
+  commentId: Overload:IDAnalyzer.DocuPass.GenerateContract
+  isSpec: "True"
+  fullName: IDAnalyzer.DocuPass.GenerateContract
+  nameWithType: DocuPass.GenerateContract
 - uid: IDAnalyzer.DocuPass.HideBrandingLogo(System.Boolean)
   name: HideBrandingLogo(Boolean)
   href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_HideBrandingLogo_System_Boolean_
@@ -894,6 +933,32 @@ references:
   isSpec: "True"
   fullName: IDAnalyzer.DocuPass.SetWelcomeMessage
   nameWithType: DocuPass.SetWelcomeMessage
+- uid: IDAnalyzer.DocuPass.SignContract(System.String,System.String,System.Object)
+  name: SignContract(String, String, Object)
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_SignContract_System_String_System_String_System_Object_
+  commentId: M:IDAnalyzer.DocuPass.SignContract(System.String,System.String,System.Object)
+  fullName: IDAnalyzer.DocuPass.SignContract(System.String, System.String, System.Object)
+  nameWithType: DocuPass.SignContract(String, String, Object)
+- uid: IDAnalyzer.DocuPass.SignContract*
+  name: SignContract
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_SignContract_
+  commentId: Overload:IDAnalyzer.DocuPass.SignContract
+  isSpec: "True"
+  fullName: IDAnalyzer.DocuPass.SignContract
+  nameWithType: DocuPass.SignContract
+- uid: IDAnalyzer.DocuPass.SMSContractLink(System.String)
+  name: SMSContractLink(String)
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_SMSContractLink_System_String_
+  commentId: M:IDAnalyzer.DocuPass.SMSContractLink(System.String)
+  fullName: IDAnalyzer.DocuPass.SMSContractLink(System.String)
+  nameWithType: DocuPass.SMSContractLink(String)
+- uid: IDAnalyzer.DocuPass.SMSContractLink*
+  name: SMSContractLink
+  href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_SMSContractLink_
+  commentId: Overload:IDAnalyzer.DocuPass.SMSContractLink
+  isSpec: "True"
+  fullName: IDAnalyzer.DocuPass.SMSContractLink
+  nameWithType: DocuPass.SMSContractLink
 - uid: IDAnalyzer.DocuPass.SMSVerificationLink(System.String)
   name: SMSVerificationLink(String)
   href: api/IDAnalyzer.DocuPass.html#IDAnalyzer_DocuPass_SMSVerificationLink_System_String_
